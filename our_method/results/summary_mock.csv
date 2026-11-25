@@ -1,0 +1,3 @@
+method,mean_structural_recovery,mean_semantic_recovery,mean_attempts
+baseline,1.0,1.0,1.0
+ours,1.0,1.0,5.666666666666667
