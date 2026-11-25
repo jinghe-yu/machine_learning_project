@@ -68,7 +68,7 @@ def _prompt_context(
     depth_match = re.search(r"(?m)^Maximum expression depth: (\d+)\.$", prompt)
     max_depth = int(depth_match.group(1)) if depth_match else None
 
-    accepted_header = "Already accepted (do not repeat, including logically equivalent forms):"
+    accepted_header = "Previously accepted hypotheses:"
     accepted: list[str] = []
     if accepted_header in prompt:
         memory = prompt.split(accepted_header, 1)[1]
@@ -104,7 +104,7 @@ def _valid_candidates(
 
 
 class MockLLM:
-    """Return intentional formatting/logic failures, then valid unique candidates."""
+    """Return intentional failures, then valid candidates outside prompt history."""
 
     def __init__(self) -> None:
         self.calls = 0

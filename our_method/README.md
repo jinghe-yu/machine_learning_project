@@ -1,9 +1,11 @@
 # Boolean Genetics: Inference-Time Sampling
 
-This project compares a one-shot Boolean-expression baseline with memory-based
-rejection sampling. The sampler validates each candidate against observations,
-rejects duplicates by truth-table equivalence, feeds rejection reasons into
-later prompts, and reduces temperature as it approaches the target.
+This project compares fixed-budget Boolean-expression proposals with and
+without sampling feedback. Both methods make the same number of model calls per
+task: by default, the number of mechanistically distinct ground truths, capped
+only when `--max-attempts` is supplied. The sampler records every proposal,
+including malformed outputs, so VR, NR, and RR use explicit and comparable
+denominators.
 
 ## Setup
 
@@ -78,8 +80,8 @@ evidence**:
 
 ```powershell
 python baseline.py --mock --samples 3 --seed 42
-python evaluate_ours.py --mock --samples 3 --seed 42 --max-attempts 20
-python compare_results.py --baseline results\baseline_mock.csv --ours results\ours_mock.csv --summary results\summary_mock.csv --chart results\recovery_mock.png
+python evaluate_ours.py --mock --samples 3 --seed 42
+python compare_results.py --baseline results\baseline_mock.csv --ours results\ours_mechanistic_mock.csv --summary results\summary_mock.csv --chart results\recovery_mock.png
 ```
 
 ![Mock-only pipeline demonstration; not real model results](results/recovery_mock.png)
@@ -87,12 +89,15 @@ python compare_results.py --baseline results\baseline_mock.csv --ours results\ou
 ### Real model
 
 Run both experiments with the same model, seed, and dataset so their sampled
-tasks match:
+tasks and per-task proposal budgets match. The baseline uses independent
+proposals without history or duplicate rejection; the default sampler uses
+mechanistic deduplication and feeds accepted hypotheses/rejection feedback into
+later prompts:
 
 ```powershell
 python baseline.py --samples 10 --seed 42
-python evaluate_ours.py --samples 10 --seed 42 --max-attempts 50
-python compare_results.py
+python evaluate_ours.py --samples 10 --seed 42
+python compare_results.py --baseline results\baseline.csv --ours results\ours_mechanistic.csv
 ```
 
 If either run is interrupted, rerun the same command with the same
@@ -100,12 +105,40 @@ If either run is interrupted, rerun the same command with the same
 saved in that CSV. Each completed task is flushed and synced to disk before the
 next one begins.
 
-Outputs are written under `results\`. Recovery is reported using the official
-structural (mechanistic-key) criterion and also using semantic truth-table
-equivalence. The two metrics have different denominators, so they should not
-be conflated. Each completed task is appended to its CSV immediately, so
-completed results remain available if a run is interrupted. Re-running with
-the same output path appends rows rather than replacing the previous run.
+Outputs are written under `results\`. The report includes:
+
+- **VR**: proposals consistent with the observations and hypothesis-space
+  constraints, divided by the number of model calls.
+- **NR**: unique in-space mechanistic proposals, whether or not they match the
+  observations, divided by the number of model calls.
+- **RR**: recovered mechanistic ground truths divided by the enumerated
+  mechanistic ground-truth set.
+- **Simple/Complex RR**: RR split by operator count (`c <= 3` and `c > 3`).
+  A stratum with no ground-truth hypotheses is reported as `n/a`.
+
+The semantic recovery metric remains available as a secondary diagnostic.
+Each CSV row also stores the ordered extracted candidates and raw model
+responses as JSON arrays, including malformed responses, for failure analysis.
+`evaluate_ours.py --dedup` accepts `none`, `semantic`, or `mechanistic`;
+`--no-feedback` disables accepted-hypothesis and rejection feedback while
+retaining the selected deduplication behavior. For example, compare the
+deduplication modes under feedback using separate outputs:
+
+```powershell
+python evaluate_ours.py --samples 10 --seed 42 --dedup none --output results\ours_none.csv
+python evaluate_ours.py --samples 10 --seed 42 --dedup semantic --output results\ours_semantic.csv
+python evaluate_ours.py --samples 10 --seed 42 --dedup mechanistic --output results\ours_mechanistic.csv
+```
+
+Each completed task is appended to its CSV immediately. Existing result files
+with older column layouts are rejected rather than silently mixed with the new
+metrics; choose a fresh `--output` path when upgrading.
+
+The checked-in dataset is a small, low-depth Boolean setting and does not
+contain `c > 3` ground truths. Its Complex RR is therefore `n/a`; use the
+paper-matched hard dataset before drawing conclusions about complex-hypothesis
+coverage. The local mock only exercises pipeline behavior and is not
+experimental evidence.
 
 For AINative, the adapter reads `AINATIVE_MODEL`; set `AINATIVE_API_KEY` to
 avoid automatic provisioning. For OpenRouter, `OPENROUTER_API_KEY` selects the
@@ -113,8 +146,8 @@ provider and `LLM_MODEL` overrides its default model.
 
 ## Limitations
 
-- Rejection sampling can require substantially more model calls than one-shot
-  generation, increasing latency and API usage.
+- The fixed proposal budget does not guarantee a target number of valid,
+  unique hypotheses; invalid and repeated outputs consume budget.
 - Output extraction handles common labels and Markdown fences, but other
   malformed or novel response formats may still be rejected.
 - Truth-table semantic deduplication is exponential and supports at most 16
@@ -122,6 +155,6 @@ provider and `LLM_MODEL` overrides its default model.
 - Mock mode only validates software behavior; only real model runs can support
   conclusions about hypothesis recovery.
 
-Run the 13 local tests with `python -m unittest discover`. They cover
-expression validation, semantic deduplication, malformed mock outputs, API
-retry handling, and recovery metrics.
+Run the local tests with `python -m unittest discover`. They cover expression
+validation, semantic/mechanistic deduplication, fixed proposal budgets,
+malformed mock outputs, API retry handling, and VR/NR/RR reporting.

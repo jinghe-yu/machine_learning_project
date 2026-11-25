@@ -7,10 +7,11 @@ import itertools
 import json
 import re
 from dataclasses import dataclass
-from typing import Callable, Mapping, Sequence
+from typing import Callable, Literal, Mapping, Sequence
 
 
 CompletionFn = Callable[[str, float], str]
+DeduplicationMode = Literal["none", "semantic", "mechanistic"]
 _MAX_TRUTH_TABLE_VARIABLES = 16
 
 
@@ -23,6 +24,8 @@ class Observation:
 @dataclass(frozen=True)
 class SamplingResult:
     hypotheses: tuple[str, ...]
+    proposals: tuple[str | None, ...]
+    raw_responses: tuple[str, ...]
     attempts: int
     rejection_counts: Mapping[str, int]
     reached_target: bool
@@ -161,13 +164,56 @@ def _build_prompt(
     allowed_operators: frozenset[str],
     max_depth: int | None,
     allow_constants: bool,
+    deduplication: DeduplicationMode,
+    include_history: bool,
+    mechanistic_options: Mapping[str, bool],
 ) -> str:
     data = [
         {"inputs": dict(observation.inputs), "output": observation.output}
         for observation in observations
     ]
+    if deduplication == "semantic":
+        uniqueness = (
+            "Do not repeat an accepted hypothesis or a logically equivalent form."
+        )
+    elif deduplication == "mechanistic":
+        uniqueness = (
+            "Do not repeat an accepted hypothesis under the structural "
+            "equivalence rules. "
+            + "; ".join(
+                [
+                    rule
+                    for enabled, rule in (
+                        (
+                            mechanistic_options["apply_commutativity"],
+                            "operand order is ignored",
+                        ),
+                        (
+                            mechanistic_options["apply_idempotence_and_or"],
+                            "repeated AND/OR operands collapse",
+                        ),
+                        (
+                            mechanistic_options["flatten_associativity"],
+                            "nested AND/OR/XOR operations are flattened",
+                        ),
+                    )
+                    if enabled
+                ]
+                + [
+                    "De Morgan, distribution, and absorption are not applied."
+                ]
+            )
+            + "."
+        )
+    else:
+        uniqueness = "Repeating a previous hypothesis is allowed."
     memory = "\n".join(f"- {hypothesis}" for hypothesis in accepted) or "(none)"
-    feedback = f"\nPrevious rejection: {last_feedback}" if last_feedback else ""
+    history = f"Previously accepted hypotheses:\n{memory}\n" if include_history else ""
+    feedback = (
+        f"\nPrevious rejection: {last_feedback}"
+        if include_history and last_feedback
+        else ""
+    )
     depth_constraint = (
         f"Maximum expression depth: {max_depth}.\n" if max_depth is not None else ""
     )
@@ -182,10 +228,11 @@ def _build_prompt(
         "\n"
         "Use Python-style Boolean syntax (and, or, not, ^ for XOR, NOR(a, b)), "
         f"parentheses. {constant_constraint} Return only the expression.\n"
+        f"{uniqueness}\n"
         f"{depth_constraint}"
         f"Variables: {', '.join(variables)}\n"
         f"Observations: {json.dumps(data, sort_keys=True)}\n"
-        f"Already accepted (do not repeat, including logically equivalent forms):\n{memory}"
+        f"{history}"
         f"{feedback}"
     )
 
@@ -201,11 +248,15 @@ def sample_hypotheses(
     allowed_operators: Sequence[str] = ("AND", "OR", "NOT"),
     max_depth: int | None = None,
     allow_constants: bool = True,
+    deduplication: DeduplicationMode = "semantic",
+    include_history: bool = True,
+    stop_on_target: bool = True,
+    mechanistic_options: Mapping[str, bool] | None = None,
 ) -> SamplingResult:
-    """Generate distinct hypotheses until the target is met or attempts run out.
+    """Generate hypotheses until the target is met or the proposal budget runs out.
 
     `complete(prompt, temperature)` is the only model-specific integration point.
-    Semantic deduplication compares truth tables across all task variables.
+    Proposal history retains one entry per model call; failed extraction is `None`.
     """
     if target_count < 0:
         raise ValueError("target_count must be non-negative")
@@ -221,14 +272,40 @@ def sample_hypotheses(
         raise ValueError(f"unsupported operators: {', '.join(sorted(unsupported_operators))}")
     if max_depth is not None and max_depth < 0:
         raise ValueError("max_depth must be non-negative")
+    if deduplication not in {"none", "semantic", "mechanistic"}:
+        raise ValueError(f"unsupported deduplication mode: {deduplication}")
+    expected_options = {
+        "apply_commutativity",
+        "apply_idempotence_and_or",
+        "flatten_associativity",
+    }
+    canonicalization_options = {
+        "apply_commutativity": True,
+        "apply_idempotence_and_or": True,
+        "flatten_associativity": True,
+    }
+    if mechanistic_options is not None:
+        unsupported_options = set(mechanistic_options).difference(expected_options)
+        if unsupported_options:
+            raise ValueError(
+                f"unsupported mechanistic option(s): {', '.join(sorted(unsupported_options))}"
+            )
+        canonicalization_options.update(mechanistic_options)
+    if any(type(value) is not bool for value in canonicalization_options.values()):
+        raise ValueError("mechanistic_options values must be booleans")
     accepted: list[str] = []
-    seen_keys: set[tuple[bool, ...]] = set()
+    seen_keys: set[tuple] = set()
+    proposals: list[str | None] = []
+    raw_responses: list[str] = []
     rejection_counts = {"invalid": 0, "inconsistent": 0, "duplicate": 0}
     last_feedback: str | None = None
     attempts = 0
 
-    while len(accepted) < target_count and attempts < max_attempts:
-        progress = len(accepted) / target_count if target_count else 1.0
+    while (
+        attempts < max_attempts
+        and (not stop_on_target or len(accepted) < target_count)
+    ):
+        progress = min(len(accepted) / target_count, 1.0) if target_count else 1.0
         temperature = start_temperature + (end_temperature - start_temperature) * progress
         prompt = _build_prompt(
             variables,
@@ -238,39 +315,59 @@ def sample_hypotheses(
             allowed,
             max_depth,
             allow_constants,
+            deduplication,
+            include_history,
+            canonicalization_options,
         )
         attempts += 1
-        candidate = "response"
+        candidate: str | None = None
+        response = complete(prompt, temperature)
+        raw_responses.append(response if isinstance(response, str) else repr(response))
 
         try:
-            candidate = _extract_candidate(complete(prompt, temperature))
+            candidate = _extract_candidate(response)
             parsed = _validate_candidate_syntax(
                 candidate, variables, allowed, max_depth, allow_constants
             )
-            key = _semantic_key(parsed, variables)
+            if deduplication == "semantic":
+                key = _semantic_key(parsed, variables)
+            elif deduplication == "mechanistic":
+                key = expression_mechanistic_key(
+                    candidate, **canonicalization_options
+                )
+            else:
+                key = None
         except (SyntaxError, ValueError, TypeError) as error:
             rejection_counts["invalid"] += 1
-            last_feedback = f"{candidate} is invalid: {error}"
+            proposals.append(candidate)
+            last_feedback = f"{candidate or 'The response'} is invalid: {error}"
             continue
 
+        proposals.append(candidate)
         if any(_evaluate(parsed, observation.inputs) != observation.output for observation in validated_observations):
             rejection_counts["inconsistent"] += 1
             last_feedback = f"{candidate} does not match all observed outputs."
             continue
-        if key in seen_keys:
+        if key is not None and key in seen_keys:
             rejection_counts["duplicate"] += 1
-            last_feedback = f"{candidate} duplicates an accepted hypothesis semantically."
+            last_feedback = (
+                f"{candidate} duplicates an accepted hypothesis "
+                f"under {deduplication} deduplication."
+            )
             continue
 
         accepted.append(candidate)
-        seen_keys.add(key)
+        if key is not None:
+            seen_keys.add(key)
         last_feedback = None
 
     return SamplingResult(
         hypotheses=tuple(accepted),
+        proposals=tuple(proposals),
+        raw_responses=tuple(raw_responses),
         attempts=attempts,
         rejection_counts=rejection_counts,
-        reached_target=len(accepted) == target_count,
+        reached_target=len(accepted) >= target_count,
     )
 
 
@@ -336,8 +433,12 @@ def validate_expression(
     """Check syntax, task constraints, and consistency with observed data."""
     variables, validated_observations = _validate_observations(observations)
     allowed = frozenset(operator.upper() for operator in allowed_operators)
-    parsed = _validate_candidate_syntax(
-        expression, variables, allowed, max_depth, allow_constants
+    parsed = validate_expression_constraints(
+        expression,
+        variables,
+        allowed_operators=tuple(allowed),
+        max_depth=max_depth,
+        allow_constants=allow_constants,
     )
     if any(
         _evaluate(parsed, observation.inputs) != observation.output
@@ -345,6 +446,42 @@ def validate_expression(
     ):
         return False, "expression does not match all observed outputs"
     return True, None
+
+
+def validate_expression_constraints(
+    expression: str,
+    variables: Sequence[str],
+    *,
+    allowed_operators: Sequence[str] = ("AND", "OR", "NOT"),
+    max_depth: int | None = None,
+    allow_constants: bool = False,
+) -> ast.Expression:
+    """Parse an expression and enforce its syntax and hypothesis-space constraints."""
+    allowed = frozenset(operator.upper() for operator in allowed_operators)
+    unsupported_operators = allowed.difference({"AND", "OR", "NOT", "XOR", "NOR"})
+    if unsupported_operators:
+        raise ValueError(f"unsupported operators: {', '.join(sorted(unsupported_operators))}")
+    if max_depth is not None and max_depth < 0:
+        raise ValueError("max_depth must be non-negative")
+    return _validate_candidate_syntax(
+        expression, variables, allowed, max_depth, allow_constants
+    )
+
+
+def expression_operator_count(expression: str) -> int:
+    """Count operator applications, using arity minus one for AND/OR chains."""
+    parsed = _parse_expression(expression)
+    count = 0
+    for node in ast.walk(parsed):
+        if isinstance(node, ast.BoolOp):
+            count += len(node.values) - 1
+        elif isinstance(node, ast.UnaryOp) and isinstance(node.op, ast.Not):
+            count += 1
+        elif isinstance(node, ast.BinOp) and isinstance(node.op, ast.BitXor):
+            count += 1
+        elif isinstance(node, ast.Call):
+            count += 1
+    return count
 
 
 def evaluate_expression(expression: str, values: Mapping[str, bool]) -> bool:

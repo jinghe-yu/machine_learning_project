@@ -33,7 +33,7 @@ class SamplingTests(unittest.TestCase):
         self.assertEqual(result.hypotheses, ("A AND B", "A"))
         self.assertEqual(result.rejection_counts["duplicate"], 1)
         self.assertEqual(temperatures, [1.0, 0.6, 0.6])
-        self.assertIn("duplicates an accepted hypothesis semantically", prompts[2])
+        self.assertIn("duplicates an accepted hypothesis under semantic deduplication", prompts[2])
 
     def test_invalid_and_inconsistent_candidates_receive_feedback(self):
         responses = iter(("A xor B", "A OR B", "A AND B"))
@@ -46,6 +46,8 @@ class SamplingTests(unittest.TestCase):
         result = sample_hypotheses(OBSERVATIONS, complete, target_count=1, max_attempts=3)
 
         self.assertEqual(result.hypotheses, ("A AND B",))
+        self.assertEqual(result.proposals, ("A xor B", "A OR B", "A AND B"))
+        self.assertEqual(result.raw_responses, ("A xor B", "A OR B", "A AND B"))
         self.assertEqual(result.rejection_counts, {"invalid": 1, "inconsistent": 1, "duplicate": 0})
         self.assertIn("Previous rejection:", prompts[1])
         self.assertIn("does not match all observed outputs", prompts[2])
@@ -80,6 +82,63 @@ class SamplingTests(unittest.TestCase):
 
         self.assertEqual(result.hypotheses, ("x AND y",))
         self.assertEqual(result.rejection_counts["invalid"], 1)
+
+    def test_mechanistic_dedup_keeps_structurally_distinct_equivalent_forms(self):
+        responses = iter(("x AND y", "NOT (NOT x OR NOT y)"))
+        observations = (Observation({"x": True, "y": True}, True),)
+
+        result = sample_hypotheses(
+            observations,
+            lambda *_: next(responses),
+            target_count=2,
+            max_attempts=2,
+            allowed_operators=("AND", "OR", "NOT"),
+            deduplication="mechanistic",
+        )
+
+        self.assertEqual(len(result.hypotheses), 2)
+        self.assertEqual(result.rejection_counts["duplicate"], 0)
+
+    def test_mechanistic_dedup_rejects_canonical_duplicates(self):
+        responses = iter(("x AND y", "y AND x"))
+        observations = (Observation({"x": True, "y": True}, True),)
+
+        result = sample_hypotheses(
+            observations,
+            lambda *_: next(responses),
+            target_count=2,
+            max_attempts=2,
+            allowed_operators=("AND", "OR", "NOT"),
+            deduplication="mechanistic",
+        )
+
+        self.assertEqual(result.hypotheses, ("x AND y",))
+        self.assertEqual(result.rejection_counts["duplicate"], 1)
+
+    def test_fixed_proposal_budget_records_duplicate_outputs(self):
+        prompts = []
+
+        def complete(prompt, _temperature):
+            prompts.append(prompt)
+            return "A"
+
+        result = sample_hypotheses(
+            (Observation({"A": True}, True),),
+            complete,
+            target_count=1,
+            max_attempts=3,
+            start_temperature=0.7,
+            end_temperature=0.7,
+            deduplication="none",
+            include_history=False,
+            stop_on_target=False,
+        )
+
+        self.assertEqual(result.attempts, 3)
+        self.assertEqual(result.proposals, ("A", "A", "A"))
+        self.assertEqual(result.raw_responses, ("A", "A", "A"))
+        self.assertEqual(result.hypotheses, ("A", "A", "A"))
+        self.assertEqual(len(set(prompts)), 1)
 
 
 if __name__ == "__main__":

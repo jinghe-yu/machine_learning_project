@@ -3,7 +3,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from benchmark_utils import append_result_csv, load_tasks, score_hypotheses
+from benchmark_utils import (
+    append_result_csv,
+    load_tasks,
+    score_hypotheses,
+    task_target_count,
+)
+from boolean_genetics import expression_mechanistic_key
 
 
 class BenchmarkMetricTests(unittest.TestCase):
@@ -37,6 +43,47 @@ class BenchmarkMetricTests(unittest.TestCase):
             [(row["observation_set_id"], row["attempts"]) for row in rows],
             [("first", "1"), ("second", "2")],
         )
+
+    def test_append_result_csv_rejects_an_old_schema(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "old.csv"
+            output.write_text("method,observation_set_id\nbaseline,first\n", encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "schema mismatch"):
+                append_result_csv(output, {"observation_set_id": "second"})
+
+    def test_metrics_use_mechanistic_ground_truth_and_proposal_denominators(self):
+        simple = "x AND y"
+        complex_expression = "NOT (NOT x OR NOT y) AND (x OR y)"
+        task = {
+            "observation_set_id": "metric-test",
+            "n_observations": 1,
+            "observations": [{"inputs": {"x": True, "y": True}, "output": True}],
+            "ground_truth_expressions": [
+                {
+                    "formula": formula,
+                    "mechanistic_key": repr(expression_mechanistic_key(formula)),
+                }
+                for formula in (simple, complex_expression)
+            ],
+        }
+        metadata = {
+            "variables": ["x", "y"],
+            "operators": ["AND", "OR", "NOT"],
+            "max_depth": 4,
+        }
+        candidates = [simple, simple, complex_expression, "NOT x", "z", None]
+
+        result = score_hypotheses(task, candidates, metadata)
+
+        self.assertEqual(task_target_count(task, metadata["variables"]), 2)
+        self.assertEqual(result["n_proposals"], 6)
+        self.assertAlmostEqual(result["validity_rate"], 3 / 6)
+        self.assertAlmostEqual(result["novelty_rate"], 3 / 6)
+        self.assertEqual(result["recovery_rate"], 1.0)
+        self.assertEqual(result["simple_recovery_rate"], 1.0)
+        self.assertEqual(result["complex_recovery_rate"], 1.0)
+        self.assertEqual(result["n_recovered_semantic"], 1)
 
 
 if __name__ == "__main__":
