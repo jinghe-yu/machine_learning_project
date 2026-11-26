@@ -1,0 +1,26 @@
+{
+  "git_commit": "14591e380558a4e566e55274faacda08fa36631d",
+  "dataset": "data/boolean_dataset.json",
+  "dataset_sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+  "model_id": "qwen3.5-4b-q4_k_m",
+  "weights_sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+  "server": "http://127.0.0.1:8081/v1",
+  "runtime": "llama.cpp b12359, Metal compatibility patch from PR #29814",
+  "thinking": "off",
+  "context_size": 4096,
+  "parallel": 1,
+  "task_seed": 42,
+  "temperature": 0.7,
+  "tasks_per_method": 56,
+  "proposals_per_method": 90,
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ],
+  "weights_source": "https://modelscope.cn/models/unsloth/Qwen3.5-4B-GGUF/resolve/master/Qwen3.5-4B-Q4_K_M.gguf"
+}
