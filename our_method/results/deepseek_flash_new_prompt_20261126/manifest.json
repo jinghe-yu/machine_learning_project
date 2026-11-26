@@ -1,0 +1,98 @@
+{
+  "mode": "live",
+  "git_commit": "cc6940c1c501185de844a6c48217f1f2f82f11a4",
+  "sampler_sha256": "2a569eda2f555279f4d020db3dc4c65f7894c337ab278686f772c76699d814c4",
+  "scorer_sha256": "9547f87630761cc6c84710c20cfbd2b8e6c075dc981e46f3209fdde77155b9e6",
+  "depth_runner_sha256": "7cbef2cc2664d7abf427bc9bbf1b1b7a66880ba60a1a3d11dd9d7c9089715e49",
+  "runner_sha256": "041bea7681ef3a9508d65901551fd3ca6b0b4b0afd34760387335a5ad661acc6",
+  "model_id": "deepseek-flash",
+  "thinking": "disabled",
+  "temperature": 0.7,
+  "max_tokens": 128,
+  "task_seed": 42,
+  "generation_seed": null,
+  "generation_seed_note": "DeepSeek Chat Completions does not expose llama.cpp's generation seed.",
+  "grammar": "Unavailable on the official DeepSeek Chat Completions API.",
+  "datasets": {
+    "easy": {
+      "file": "boolean_dataset.json",
+      "sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+      "tasks": 56,
+      "proposals_per_cell": 90
+    },
+    "hard": {
+      "file": "boolean_full_depth2.json",
+      "sha256": "441e1d4d96a0f6f987e0355a03d4f66869b99dcab5d298b6343cbee6b0356378",
+      "tasks": 80,
+      "proposals_per_cell": 975
+    }
+  },
+  "cells": [
+    {
+      "dataset": "easy",
+      "condition": "prompt",
+      "method": "baseline"
+    },
+    {
+      "dataset": "easy",
+      "condition": "prompt",
+      "method": "ours_mechanistic"
+    },
+    {
+      "dataset": "easy",
+      "condition": "prompt",
+      "method": "ours_mechanistic_no_feedback"
+    },
+    {
+      "dataset": "easy",
+      "condition": "prompt",
+      "method": "ours_semantic"
+    },
+    {
+      "dataset": "easy",
+      "condition": "prompt",
+      "method": "ours_semantic_no_feedback"
+    },
+    {
+      "dataset": "easy",
+      "condition": "prompt",
+      "method": "ours_none"
+    },
+    {
+      "dataset": "easy",
+      "condition": "prompt",
+      "method": "ours_none_no_feedback"
+    },
+    {
+      "dataset": "easy",
+      "condition": "examples",
+      "method": "baseline"
+    },
+    {
+      "dataset": "easy",
+      "condition": "examples",
+      "method": "ours_mechanistic"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "baseline"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "ours_mechanistic"
+    }
+  ],
+  "depth_examples": "Depth examples with illustrative variables a and b. `a and b` has depth 1 and is allowed by the depth rule. `not (a and b)` has depth 2 and exceeds the limit. Use only the listed task variables in your answer.",
+  "usage": {
+    "prompt_tokens": 496536,
+    "cached_input_tokens": 1152,
+    "output_tokens": 13296,
+    "requests": 2760,
+    "peak_rmb": 1.097182079999998,
+    "off_peak_rmb": 0.548591039999999,
+    "unconfirmed_requests": 0,
+    "unconfirmed_peak_reserve_rmb": 0.0
+  }
+}

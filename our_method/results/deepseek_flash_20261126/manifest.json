@@ -1,0 +1,35 @@
+{
+  "git_commit": "00b233615d1a8f42ef3f910d848a7cb3c91f89cf",
+  "dataset": "data/boolean_dataset.json",
+  "dataset_sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+  "model_id": "deepseek-flash",
+  "model_snapshot": "DeepSeek-V4.1-Flash-1017",
+  "server": "https://api.deepseek.com",
+  "thinking": "off",
+  "temperature": 0.7,
+  "task_seed": 42,
+  "task_seed_controls": "task selection and order; sampling is independent",
+  "tasks_per_method": 56,
+  "proposals_per_method": 90,
+  "max_output_tokens": 64,
+  "parallel_tasks": 12,
+  "runs_per_method": 1,
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ],
+  "experiment": "Match Qwen3.5 4B and 9B seven-method configuration on the same dataset.",
+  "usage": {
+    "requests": 630,
+    "missed_input_tokens": 96581,
+    "cached_input_tokens": 0,
+    "output_tokens": 1712,
+    "off_peak_rmb": 0.103429,
+    "peak_rmb": 0.206858
+  }
+}
