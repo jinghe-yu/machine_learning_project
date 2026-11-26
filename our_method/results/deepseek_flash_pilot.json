@@ -1,0 +1,190 @@
+{
+  "mode": "live",
+  "model": "deepseek-flash",
+  "request_budget": 42,
+  "max_output_tokens": 64,
+  "rows": [
+    {
+      "task": "n1_inputs_01_outputs_0",
+      "method": "baseline",
+      "attempts": 3,
+      "raw_responses": [
+        "not x",
+        "not x",
+        "not y"
+      ],
+      "VR": 0.3333333333333333,
+      "NR": 0.6666666666666666,
+      "RR": 0.3333333333333333
+    },
+    {
+      "task": "n1_inputs_01_outputs_0",
+      "method": "ours",
+      "attempts": 3,
+      "raw_responses": [
+        "not y",
+        "x and not y",
+        "x and y"
+      ],
+      "VR": 0.6666666666666666,
+      "NR": 0.6666666666666666,
+      "RR": 0.6666666666666666
+    },
+    {
+      "task": "n1_inputs_10_outputs_1",
+      "method": "baseline",
+      "attempts": 3,
+      "raw_responses": [
+        "x",
+        "x",
+        "x"
+      ],
+      "VR": 1.0,
+      "NR": 0.3333333333333333,
+      "RR": 0.3333333333333333
+    },
+    {
+      "task": "n1_inputs_10_outputs_1",
+      "method": "ours",
+      "attempts": 3,
+      "raw_responses": [
+        "x",
+        "x and not y",
+        "x or y"
+      ],
+      "VR": 0.6666666666666666,
+      "NR": 0.6666666666666666,
+      "RR": 0.6666666666666666
+    },
+    {
+      "task": "n1_inputs_01_outputs_1",
+      "method": "baseline",
+      "attempts": 3,
+      "raw_responses": [
+        "y",
+        "y",
+        "y"
+      ],
+      "VR": 1.0,
+      "NR": 0.3333333333333333,
+      "RR": 0.3333333333333333
+    },
+    {
+      "task": "n1_inputs_01_outputs_1",
+      "method": "ours",
+      "attempts": 3,
+      "raw_responses": [
+        "x or y",
+        "y",
+        "x ^ y"
+      ],
+      "VR": 0.6666666666666666,
+      "NR": 0.6666666666666666,
+      "RR": 0.6666666666666666
+    },
+    {
+      "task": "n1_inputs_00_outputs_0",
+      "method": "baseline",
+      "attempts": 4,
+      "raw_responses": [
+        "x",
+        "x and y",
+        "x and y",
+        "x and y"
+      ],
+      "VR": 1.0,
+      "NR": 0.5,
+      "RR": 0.5
+    },
+    {
+      "task": "n1_inputs_00_outputs_0",
+      "method": "ours",
+      "attempts": 4,
+      "raw_responses": [
+        "x and y",
+        "x or y",
+        "x ^ y",
+        "x and not y"
+      ],
+      "VR": 0.5,
+      "NR": 0.5,
+      "RR": 0.5
+    },
+    {
+      "task": "n2_inputs_00_11_outputs_01",
+      "method": "baseline",
+      "attempts": 4,
+      "raw_responses": [
+        "x and y",
+        "x and y",
+        "x and y",
+        "x and y"
+      ],
+      "VR": 1.0,
+      "NR": 0.25,
+      "RR": 0.25
+    },
+    {
+      "task": "n2_inputs_00_11_outputs_01",
+      "method": "ours",
+      "attempts": 4,
+      "raw_responses": [
+        "x and y",
+        "x ^ y",
+        "x and y",
+        "x ^ y"
+      ],
+      "VR": 0.5,
+      "NR": 0.25,
+      "RR": 0.25
+    },
+    {
+      "task": "n1_inputs_11_outputs_1",
+      "method": "baseline",
+      "attempts": 4,
+      "raw_responses": [
+        "x or y",
+        "x or y",
+        "x",
+        "x or y"
+      ],
+      "VR": 1.0,
+      "NR": 0.5,
+      "RR": 0.5
+    },
+    {
+      "task": "n1_inputs_11_outputs_1",
+      "method": "ours",
+      "attempts": 4,
+      "raw_responses": [
+        "x or y",
+        "x and y",
+        "x",
+        "y"
+      ],
+      "VR": 1.0,
+      "NR": 1.0,
+      "RR": 1.0
+    }
+  ],
+  "usage": {
+    "requests": 42,
+    "missed_input_tokens": 6135,
+    "cached_input_tokens": 0,
+    "output_tokens": 101,
+    "off_peak_rmb": 0.006539,
+    "peak_rmb": 0.013078
+  },
+  "means": {
+    "baseline": {
+      "VR": 0.8888888888888888,
+      "NR": 0.4305555555555555,
+      "RR": 0.375
+    },
+    "ours": {
+      "VR": 0.6666666666666666,
+      "NR": 0.625,
+      "RR": 0.625
+    }
+  }
+}

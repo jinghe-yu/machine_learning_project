@@ -1,0 +1,17 @@
+{
+  "status": "prepared",
+  "repo_commit": "cc6940c1c501185de844a6c48217f1f2f82f11a4",
+  "dataset": "our_method/data/boolean_full_depth2.json",
+  "dataset_sha256": "441e1d4d96a0f6f987e0355a03d4f66869b99dcab5d298b6343cbee6b0356378",
+  "tasks": 80,
+  "groups": 7,
+  "calls_per_group": 975,
+  "total_calls_planned": 6825,
+  "model": "qwen3.8-27b",
+  "temperature": 0.7,
+  "max_tokens": 256,
+  "enable_thinking": false,
+  "task_selection_seed": 42,
+  "decoding_seed": null,
+  "started_at_utc": "2026-11-26T07:44:13Z"
+}

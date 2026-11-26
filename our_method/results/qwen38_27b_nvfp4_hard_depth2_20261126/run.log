@@ -1,0 +1,660 @@
+baseline [1/80] n2_inputs_00_10_outputs_10: VR=50.0% NR=25.0% RR=16.7% calls=12
+baseline [2/80] n1_inputs_01_outputs_1: VR=100.0% NR=11.1% RR=11.1% calls=27
+baseline [3/80] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=25.0% RR=25.0% calls=4
+baseline [4/80] n2_inputs_10_11_outputs_11: VR=87.5% NR=18.8% RR=18.8% calls=16
+baseline [5/80] n2_inputs_10_11_outputs_00: VR=57.7% NR=11.5% RR=7.7% calls=26
+baseline [6/80] n2_inputs_00_11_outputs_01: VR=81.2% NR=12.5% RR=12.5% calls=16
+baseline [7/80] n2_inputs_00_10_outputs_01: VR=92.9% NR=7.1% RR=7.1% calls=14
+baseline [8/80] n4_inputs_00_01_10_11_outputs_0101: VR=80.0% NR=40.0% RR=20.0% calls=5
+baseline [9/80] n2_inputs_00_01_outputs_11: VR=92.3% NR=15.4% RR=15.4% calls=13
+baseline [10/80] n3_inputs_00_10_11_outputs_110: VR=20.0% NR=60.0% RR=20.0% calls=5
+baseline [11/80] n1_inputs_10_outputs_0: VR=81.6% NR=10.5% RR=7.9% calls=38
+baseline [12/80] n4_inputs_00_01_10_11_outputs_1110: VR=50.0% NR=100.0% RR=50.0% calls=2
+baseline [13/80] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=33.3% RR=33.3% calls=3
+baseline [14/80] n2_inputs_01_11_outputs_11: VR=43.8% NR=25.0% RR=12.5% calls=16
+baseline [15/80] n2_inputs_10_11_outputs_01: VR=41.7% NR=16.7% RR=8.3% calls=12
+baseline [16/80] n4_inputs_00_01_10_11_outputs_0000: VR=0.0% NR=15.4% RR=0.0% calls=13
+baseline [17/80] n4_inputs_00_01_10_11_outputs_0100: VR=20.0% NR=80.0% RR=20.0% calls=5
+baseline [18/80] n4_inputs_00_01_10_11_outputs_1101: VR=66.7% NR=66.7% RR=33.3% calls=3
+baseline [19/80] n2_inputs_00_10_outputs_00: VR=3.8% NR=19.2% RR=3.8% calls=26
+baseline [20/80] n3_inputs_00_01_11_outputs_101: VR=0.0% NR=25.0% RR=0.0% calls=4
+baseline [21/80] n3_inputs_00_01_11_outputs_001: VR=37.5% NR=25.0% RR=25.0% calls=8
+baseline [22/80] n3_inputs_00_01_11_outputs_100: VR=25.0% NR=62.5% RR=25.0% calls=8
+baseline [23/80] n3_inputs_00_01_10_outputs_010: VR=60.0% NR=30.0% RR=20.0% calls=10
+baseline [24/80] n2_inputs_01_11_outputs_10: VR=90.9% NR=27.3% RR=18.2% calls=11
+baseline [25/80] n4_inputs_00_01_10_11_outputs_1111: VR=0.0% NR=40.0% RR=0.0% calls=5
+baseline [26/80] n4_inputs_00_01_10_11_outputs_1011: VR=0.0% NR=100.0% RR=0.0% calls=3
+baseline [27/80] n3_inputs_00_01_10_outputs_101: VR=50.0% NR=50.0% RR=16.7% calls=6
+baseline [28/80] n4_inputs_00_01_10_11_outputs_1010: VR=100.0% NR=33.3% RR=33.3% calls=3
+baseline [29/80] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=12.5% RR=12.5% calls=8
+baseline [30/80] n1_inputs_00_outputs_0: VR=10.0% NR=10.0% RR=2.5% calls=40
+baseline [31/80] n3_inputs_00_10_11_outputs_000: VR=0.0% NR=22.2% RR=0.0% calls=18
+baseline [32/80] n2_inputs_00_01_outputs_10: VR=33.3% NR=25.0% RR=8.3% calls=12
+baseline [33/80] n3_inputs_01_10_11_outputs_010: VR=37.5% NR=50.0% RR=12.5% calls=8
+baseline [34/80] n4_inputs_00_01_10_11_outputs_0010: VR=60.0% NR=20.0% RR=20.0% calls=5
+baseline [35/80] n2_inputs_01_10_outputs_01: VR=6.2% NR=12.5% RR=6.2% calls=16
+baseline [36/80] n3_inputs_00_10_11_outputs_100: VR=62.5% NR=37.5% RR=25.0% calls=8
+baseline [37/80] n2_inputs_00_01_outputs_01: VR=100.0% NR=7.1% RR=7.1% calls=14
+baseline [38/80] n4_inputs_00_01_10_11_outputs_1001: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [39/80] n3_inputs_01_10_11_outputs_100: VR=50.0% NR=50.0% RR=25.0% calls=8
+baseline [40/80] n1_inputs_11_outputs_0: VR=91.9% NR=13.5% RR=10.8% calls=37
+baseline [41/80] n1_inputs_10_outputs_1: VR=88.9% NR=7.4% RR=7.4% calls=27
+baseline [42/80] n2_inputs_01_11_outputs_00: VR=7.7% NR=11.5% RR=3.8% calls=26
+baseline [43/80] n3_inputs_00_01_11_outputs_000: VR=0.0% NR=27.8% RR=0.0% calls=18
+baseline [44/80] n2_inputs_01_10_outputs_10: VR=62.5% NR=18.8% RR=12.5% calls=16
+baseline [45/80] n3_inputs_00_01_10_outputs_100: VR=16.7% NR=66.7% RR=16.7% calls=6
+baseline [46/80] n2_inputs_00_11_outputs_00: VR=0.0% NR=12.5% RR=0.0% calls=24
+baseline [47/80] n1_inputs_01_outputs_0: VR=36.8% NR=13.2% RR=7.9% calls=38
+baseline [48/80] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=33.3% RR=33.3% calls=3
+baseline [49/80] n1_inputs_11_outputs_1: VR=96.4% NR=10.7% RR=10.7% calls=28
+baseline [50/80] n3_inputs_00_01_10_outputs_000: VR=12.5% NR=37.5% RR=6.2% calls=16
+baseline [51/80] n3_inputs_01_10_11_outputs_101: VR=75.0% NR=37.5% RR=25.0% calls=8
+baseline [52/80] n3_inputs_00_01_10_outputs_001: VR=40.0% NR=50.0% RR=20.0% calls=10
+baseline [53/80] n3_inputs_00_01_11_outputs_111: VR=0.0% NR=25.0% RR=0.0% calls=8
+baseline [54/80] n3_inputs_00_01_11_outputs_011: VR=75.0% NR=25.0% RR=12.5% calls=8
+baseline [55/80] n2_inputs_01_10_outputs_00: VR=50.0% NR=18.2% RR=9.1% calls=22
+baseline [56/80] n2_inputs_00_11_outputs_11: VR=0.0% NR=33.3% RR=0.0% calls=12
+baseline [57/80] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=20.0% RR=20.0% calls=5
+baseline [58/80] n2_inputs_00_11_outputs_10: VR=100.0% NR=23.1% RR=23.1% calls=13
+baseline [59/80] n3_inputs_00_10_11_outputs_101: VR=0.0% NR=75.0% RR=0.0% calls=4
+baseline [60/80] n4_inputs_00_01_10_11_outputs_0110: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [61/80] n1_inputs_00_outputs_1: VR=80.0% NR=12.0% RR=12.0% calls=25
+baseline [62/80] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=33.3% RR=33.3% calls=3
+baseline [63/80] n3_inputs_01_10_11_outputs_000: VR=72.2% NR=16.7% RR=5.6% calls=18
+baseline [64/80] n2_inputs_01_11_outputs_01: VR=66.7% NR=41.7% RR=25.0% calls=12
+baseline [65/80] n3_inputs_01_10_11_outputs_110: VR=0.0% NR=33.3% RR=0.0% calls=3
+baseline [66/80] n3_inputs_00_01_11_outputs_010: VR=83.3% NR=33.3% RR=16.7% calls=6
+baseline [67/80] n3_inputs_00_01_10_outputs_110: VR=33.3% NR=33.3% RR=16.7% calls=6
+baseline [68/80] n3_inputs_01_10_11_outputs_011: VR=75.0% NR=37.5% RR=12.5% calls=8
+baseline [69/80] n4_inputs_00_01_10_11_outputs_1000: VR=80.0% NR=40.0% RR=40.0% calls=5
+baseline [70/80] n2_inputs_00_10_outputs_11: VR=0.0% NR=23.1% RR=0.0% calls=13
+baseline [71/80] n3_inputs_00_01_10_outputs_111: VR=28.6% NR=14.3% RR=14.3% calls=7
+baseline [72/80] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=25.0% RR=25.0% calls=4
+baseline [73/80] n3_inputs_00_01_11_outputs_110: VR=60.0% NR=60.0% RR=40.0% calls=5
+baseline [74/80] n2_inputs_00_01_outputs_00: VR=65.4% NR=15.4% RR=3.8% calls=26
+baseline [75/80] n3_inputs_00_10_11_outputs_111: VR=0.0% NR=62.5% RR=0.0% calls=8
+baseline [76/80] n2_inputs_10_11_outputs_10: VR=81.8% NR=36.4% RR=27.3% calls=11
+baseline [77/80] n3_inputs_00_10_11_outputs_010: VR=66.7% NR=33.3% RR=16.7% calls=6
+baseline [78/80] n2_inputs_01_10_outputs_11: VR=72.7% NR=27.3% RR=27.3% calls=11
+baseline [79/80] n3_inputs_01_10_11_outputs_111: VR=50.0% NR=25.0% RR=12.5% calls=8
+baseline [80/80] n3_inputs_00_10_11_outputs_001: VR=75.0% NR=25.0% RR=12.5% calls=8
+ours_mechanistic [1/80] n2_inputs_00_10_outputs_10: VR=33.3% NR=33.3% RR=16.7% calls=12
+ours_mechanistic [2/80] n1_inputs_01_outputs_1: VR=33.3% NR=37.0% RR=22.2% calls=27
+ours_mechanistic [3/80] n3_inputs_00_01_10_outputs_011: VR=25.0% NR=75.0% RR=25.0% calls=4
+ours_mechanistic [4/80] n2_inputs_10_11_outputs_11: VR=25.0% NR=31.2% RR=18.8% calls=16
+ours_mechanistic [5/80] n2_inputs_10_11_outputs_00: VR=26.9% NR=15.4% RR=7.7% calls=26
+ours_mechanistic [6/80] n2_inputs_00_11_outputs_01: VR=18.8% NR=12.5% RR=12.5% calls=16
+ours_mechanistic [7/80] n2_inputs_00_10_outputs_01: VR=28.6% NR=28.6% RR=21.4% calls=14
+ours_mechanistic [8/80] n4_inputs_00_01_10_11_outputs_0101: VR=40.0% NR=60.0% RR=40.0% calls=5
+ours_mechanistic [9/80] n2_inputs_00_01_outputs_11: VR=30.8% NR=46.2% RR=23.1% calls=13
+ours_mechanistic [10/80] n3_inputs_00_10_11_outputs_110: VR=40.0% NR=80.0% RR=20.0% calls=5
+ours_mechanistic [11/80] n1_inputs_10_outputs_0: VR=23.7% NR=23.7% RR=13.2% calls=38
+ours_mechanistic [12/80] n4_inputs_00_01_10_11_outputs_1110: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [13/80] n4_inputs_00_01_10_11_outputs_0111: VR=66.7% NR=66.7% RR=66.7% calls=3
+ours_mechanistic [14/80] n2_inputs_01_11_outputs_11: VR=6.2% NR=31.2% RR=6.2% calls=16
+ours_mechanistic [15/80] n2_inputs_10_11_outputs_01: VR=25.0% NR=33.3% RR=8.3% calls=12
+ours_mechanistic [16/80] n4_inputs_00_01_10_11_outputs_0000: VR=0.0% NR=30.8% RR=0.0% calls=13
+ours_mechanistic [17/80] n4_inputs_00_01_10_11_outputs_0100: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_mechanistic [18/80] n4_inputs_00_01_10_11_outputs_1101: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_mechanistic [19/80] n2_inputs_00_10_outputs_00: VR=11.5% NR=34.6% RR=7.7% calls=26
+ours_mechanistic [20/80] n3_inputs_00_01_11_outputs_101: VR=25.0% NR=75.0% RR=25.0% calls=4
+ours_mechanistic [21/80] n3_inputs_00_01_11_outputs_001: VR=37.5% NR=25.0% RR=12.5% calls=8
+ours_mechanistic [22/80] n3_inputs_00_01_11_outputs_100: VR=12.5% NR=62.5% RR=12.5% calls=8
+ours_mechanistic [23/80] n3_inputs_00_01_10_outputs_010: VR=40.0% NR=30.0% RR=10.0% calls=10
+ours_mechanistic [24/80] n2_inputs_01_11_outputs_10: VR=36.4% NR=54.5% RR=18.2% calls=11
+ours_mechanistic [25/80] n4_inputs_00_01_10_11_outputs_1111: VR=0.0% NR=40.0% RR=0.0% calls=5
+ours_mechanistic [26/80] n4_inputs_00_01_10_11_outputs_1011: VR=0.0% NR=66.7% RR=0.0% calls=3
+ours_mechanistic [27/80] n3_inputs_00_01_10_outputs_101: VR=50.0% NR=83.3% RR=33.3% calls=6
+ours_mechanistic [28/80] n4_inputs_00_01_10_11_outputs_1010: VR=0.0% NR=100.0% RR=0.0% calls=3
+ours_mechanistic [29/80] n3_inputs_00_10_11_outputs_011: VR=25.0% NR=50.0% RR=25.0% calls=8
+ours_mechanistic [30/80] n1_inputs_00_outputs_0: VR=15.0% NR=25.0% RR=10.0% calls=40
+ours_mechanistic [31/80] n3_inputs_00_10_11_outputs_000: VR=0.0% NR=33.3% RR=0.0% calls=18
+ours_mechanistic [32/80] n2_inputs_00_01_outputs_10: VR=50.0% NR=25.0% RR=8.3% calls=12
+ours_mechanistic [33/80] n3_inputs_01_10_11_outputs_010: VR=12.5% NR=75.0% RR=12.5% calls=8
+ours_mechanistic [34/80] n4_inputs_00_01_10_11_outputs_0010: VR=60.0% NR=40.0% RR=20.0% calls=5
+ours_mechanistic [35/80] n2_inputs_01_10_outputs_01: VR=25.0% NR=56.2% RR=25.0% calls=16
+ours_mechanistic [36/80] n3_inputs_00_10_11_outputs_100: VR=75.0% NR=37.5% RR=25.0% calls=8
+ours_mechanistic [37/80] n2_inputs_00_01_outputs_01: VR=50.0% NR=42.9% RR=28.6% calls=14
+ours_mechanistic [38/80] n4_inputs_00_01_10_11_outputs_1001: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic [39/80] n3_inputs_01_10_11_outputs_100: VR=62.5% NR=50.0% RR=25.0% calls=8
+ours_mechanistic [40/80] n1_inputs_11_outputs_0: VR=91.9% NR=21.6% RR=21.6% calls=37
+ours_mechanistic [41/80] n1_inputs_10_outputs_1: VR=48.1% NR=44.4% RR=29.6% calls=27
+ours_mechanistic [42/80] n2_inputs_01_11_outputs_00: VR=23.1% NR=38.5% RR=11.5% calls=26
+ours_mechanistic [43/80] n3_inputs_00_01_11_outputs_000: VR=0.0% NR=38.9% RR=0.0% calls=18
+ours_mechanistic [44/80] n2_inputs_01_10_outputs_10: VR=31.2% NR=43.8% RR=25.0% calls=16
+ours_mechanistic [45/80] n3_inputs_00_01_10_outputs_100: VR=100.0% NR=33.3% RR=33.3% calls=6
+ours_mechanistic [46/80] n2_inputs_00_11_outputs_00: VR=0.0% NR=25.0% RR=0.0% calls=24
+ours_mechanistic [47/80] n1_inputs_01_outputs_0: VR=21.1% NR=28.9% RR=13.2% calls=38
+ours_mechanistic [48/80] n4_inputs_00_01_10_11_outputs_0001: VR=66.7% NR=66.7% RR=33.3% calls=3
+ours_mechanistic [49/80] n1_inputs_11_outputs_1: VR=53.6% NR=42.9% RR=21.4% calls=28
+ours_mechanistic [50/80] n3_inputs_00_01_10_outputs_000: VR=0.0% NR=25.0% RR=0.0% calls=16
+ours_mechanistic [51/80] n3_inputs_01_10_11_outputs_101: VR=0.0% NR=50.0% RR=0.0% calls=8
+ours_mechanistic [52/80] n3_inputs_00_01_10_outputs_001: VR=20.0% NR=50.0% RR=20.0% calls=10
+ours_mechanistic [53/80] n3_inputs_00_01_11_outputs_111: VR=25.0% NR=50.0% RR=12.5% calls=8
+ours_mechanistic [54/80] n3_inputs_00_01_11_outputs_011: VR=25.0% NR=25.0% RR=12.5% calls=8
+ours_mechanistic [55/80] n2_inputs_01_10_outputs_00: VR=36.4% NR=31.8% RR=13.6% calls=22
+ours_mechanistic [56/80] n2_inputs_00_11_outputs_11: VR=0.0% NR=41.7% RR=0.0% calls=12
+ours_mechanistic [57/80] n4_inputs_00_01_10_11_outputs_0011: VR=40.0% NR=60.0% RR=20.0% calls=5
+ours_mechanistic [58/80] n2_inputs_00_11_outputs_10: VR=84.6% NR=53.8% RR=46.2% calls=13
+ours_mechanistic [59/80] n3_inputs_00_10_11_outputs_101: VR=0.0% NR=75.0% RR=0.0% calls=4
+ours_mechanistic [60/80] n4_inputs_00_01_10_11_outputs_0110: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic [61/80] n1_inputs_00_outputs_1: VR=76.0% NR=36.0% RR=24.0% calls=25
+ours_mechanistic [62/80] n4_inputs_00_01_10_11_outputs_1100: VR=33.3% NR=100.0% RR=33.3% calls=3
+ours_mechanistic [63/80] n3_inputs_01_10_11_outputs_000: VR=44.4% NR=33.3% RR=5.6% calls=18
+ours_mechanistic [64/80] n2_inputs_01_11_outputs_01: VR=8.3% NR=8.3% RR=8.3% calls=12
+ours_mechanistic [65/80] n3_inputs_01_10_11_outputs_110: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_mechanistic [66/80] n3_inputs_00_01_11_outputs_010: VR=16.7% NR=50.0% RR=16.7% calls=6
+ours_mechanistic [67/80] n3_inputs_00_01_10_outputs_110: VR=33.3% NR=66.7% RR=16.7% calls=6
+ours_mechanistic [68/80] n3_inputs_01_10_11_outputs_011: VR=37.5% NR=50.0% RR=12.5% calls=8
+ours_mechanistic [69/80] n4_inputs_00_01_10_11_outputs_1000: VR=80.0% NR=40.0% RR=20.0% calls=5
+ours_mechanistic [70/80] n2_inputs_00_10_outputs_11: VR=30.8% NR=30.8% RR=15.4% calls=13
+ours_mechanistic [71/80] n3_inputs_00_01_10_outputs_111: VR=28.6% NR=57.1% RR=14.3% calls=7
+ours_mechanistic [72/80] n3_inputs_01_10_11_outputs_001: VR=50.0% NR=25.0% RR=25.0% calls=4
+ours_mechanistic [73/80] n3_inputs_00_01_11_outputs_110: VR=40.0% NR=60.0% RR=40.0% calls=5
+ours_mechanistic [74/80] n2_inputs_00_01_outputs_00: VR=11.5% NR=42.3% RR=11.5% calls=26
+ours_mechanistic [75/80] n3_inputs_00_10_11_outputs_111: VR=0.0% NR=62.5% RR=0.0% calls=8
+ours_mechanistic [76/80] n2_inputs_10_11_outputs_10: VR=72.7% NR=45.5% RR=36.4% calls=11
+ours_mechanistic [77/80] n3_inputs_00_10_11_outputs_010: VR=16.7% NR=50.0% RR=16.7% calls=6
+ours_mechanistic [78/80] n2_inputs_01_10_outputs_11: VR=45.5% NR=54.5% RR=18.2% calls=11
+ours_mechanistic [79/80] n3_inputs_01_10_11_outputs_111: VR=12.5% NR=37.5% RR=12.5% calls=8
+ours_mechanistic [80/80] n3_inputs_00_10_11_outputs_001: VR=37.5% NR=37.5% RR=12.5% calls=8
+ours_mechanistic_no_feedback [1/80] n2_inputs_00_10_outputs_10: VR=91.7% NR=25.0% RR=16.7% calls=12
+ours_mechanistic_no_feedback [2/80] n1_inputs_01_outputs_1: VR=77.8% NR=11.1% RR=7.4% calls=27
+ours_mechanistic_no_feedback [3/80] n3_inputs_00_01_10_outputs_011: VR=75.0% NR=50.0% RR=50.0% calls=4
+ours_mechanistic_no_feedback [4/80] n2_inputs_10_11_outputs_11: VR=100.0% NR=6.2% RR=6.2% calls=16
+ours_mechanistic_no_feedback [5/80] n2_inputs_10_11_outputs_00: VR=76.9% NR=11.5% RR=7.7% calls=26
+ours_mechanistic_no_feedback [6/80] n2_inputs_00_11_outputs_01: VR=93.8% NR=12.5% RR=12.5% calls=16
+ours_mechanistic_no_feedback [7/80] n2_inputs_00_10_outputs_01: VR=71.4% NR=21.4% RR=14.3% calls=14
+ours_mechanistic_no_feedback [8/80] n4_inputs_00_01_10_11_outputs_0101: VR=80.0% NR=20.0% RR=20.0% calls=5
+ours_mechanistic_no_feedback [9/80] n2_inputs_00_01_outputs_11: VR=92.3% NR=23.1% RR=15.4% calls=13
+ours_mechanistic_no_feedback [10/80] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=40.0% RR=0.0% calls=5
+ours_mechanistic_no_feedback [11/80] n1_inputs_10_outputs_0: VR=57.9% NR=7.9% RR=5.3% calls=38
+ours_mechanistic_no_feedback [12/80] n4_inputs_00_01_10_11_outputs_1110: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [13/80] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=66.7% RR=66.7% calls=3
+ours_mechanistic_no_feedback [14/80] n2_inputs_01_11_outputs_11: VR=87.5% NR=25.0% RR=18.8% calls=16
+ours_mechanistic_no_feedback [15/80] n2_inputs_10_11_outputs_01: VR=25.0% NR=25.0% RR=8.3% calls=12
+ours_mechanistic_no_feedback [16/80] n4_inputs_00_01_10_11_outputs_0000: VR=0.0% NR=23.1% RR=0.0% calls=13
+ours_mechanistic_no_feedback [17/80] n4_inputs_00_01_10_11_outputs_0100: VR=20.0% NR=60.0% RR=20.0% calls=5
+ours_mechanistic_no_feedback [18/80] n4_inputs_00_01_10_11_outputs_1101: VR=33.3% NR=33.3% RR=33.3% calls=3
+ours_mechanistic_no_feedback [19/80] n2_inputs_00_10_outputs_00: VR=15.4% NR=19.2% RR=3.8% calls=26
+ours_mechanistic_no_feedback [20/80] n3_inputs_00_01_11_outputs_101: VR=0.0% NR=25.0% RR=0.0% calls=4
+ours_mechanistic_no_feedback [21/80] n3_inputs_00_01_11_outputs_001: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_mechanistic_no_feedback [22/80] n3_inputs_00_01_11_outputs_100: VR=62.5% NR=50.0% RR=25.0% calls=8
+ours_mechanistic_no_feedback [23/80] n3_inputs_00_01_10_outputs_010: VR=40.0% NR=20.0% RR=10.0% calls=10
+ours_mechanistic_no_feedback [24/80] n2_inputs_01_11_outputs_10: VR=100.0% NR=27.3% RR=27.3% calls=11
+ours_mechanistic_no_feedback [25/80] n4_inputs_00_01_10_11_outputs_1111: VR=0.0% NR=20.0% RR=0.0% calls=5
+ours_mechanistic_no_feedback [26/80] n4_inputs_00_01_10_11_outputs_1011: VR=0.0% NR=33.3% RR=0.0% calls=3
+ours_mechanistic_no_feedback [27/80] n3_inputs_00_01_10_outputs_101: VR=33.3% NR=83.3% RR=16.7% calls=6
+ours_mechanistic_no_feedback [28/80] n4_inputs_00_01_10_11_outputs_1010: VR=66.7% NR=66.7% RR=33.3% calls=3
+ours_mechanistic_no_feedback [29/80] n3_inputs_00_10_11_outputs_011: VR=87.5% NR=12.5% RR=12.5% calls=8
+ours_mechanistic_no_feedback [30/80] n1_inputs_00_outputs_0: VR=7.5% NR=12.5% RR=2.5% calls=40
+ours_mechanistic_no_feedback [31/80] n3_inputs_00_10_11_outputs_000: VR=0.0% NR=27.8% RR=0.0% calls=18
+ours_mechanistic_no_feedback [32/80] n2_inputs_00_01_outputs_10: VR=16.7% NR=25.0% RR=8.3% calls=12
+ours_mechanistic_no_feedback [33/80] n3_inputs_01_10_11_outputs_010: VR=50.0% NR=62.5% RR=25.0% calls=8
+ours_mechanistic_no_feedback [34/80] n4_inputs_00_01_10_11_outputs_0010: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_mechanistic_no_feedback [35/80] n2_inputs_01_10_outputs_01: VR=62.5% NR=12.5% RR=6.2% calls=16
+ours_mechanistic_no_feedback [36/80] n3_inputs_00_10_11_outputs_100: VR=87.5% NR=25.0% RR=25.0% calls=8
+ours_mechanistic_no_feedback [37/80] n2_inputs_00_01_outputs_01: VR=71.4% NR=7.1% RR=7.1% calls=14
+ours_mechanistic_no_feedback [38/80] n4_inputs_00_01_10_11_outputs_1001: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [39/80] n3_inputs_01_10_11_outputs_100: VR=87.5% NR=25.0% RR=25.0% calls=8
+ours_mechanistic_no_feedback [40/80] n1_inputs_11_outputs_0: VR=100.0% NR=8.1% RR=8.1% calls=37
+ours_mechanistic_no_feedback [41/80] n1_inputs_10_outputs_1: VR=100.0% NR=7.4% RR=7.4% calls=27
+ours_mechanistic_no_feedback [42/80] n2_inputs_01_11_outputs_00: VR=3.8% NR=15.4% RR=3.8% calls=26
+ours_mechanistic_no_feedback [43/80] n3_inputs_00_01_11_outputs_000: VR=5.6% NR=27.8% RR=5.6% calls=18
+ours_mechanistic_no_feedback [44/80] n2_inputs_01_10_outputs_10: VR=93.8% NR=18.8% RR=12.5% calls=16
+ours_mechanistic_no_feedback [45/80] n3_inputs_00_01_10_outputs_100: VR=50.0% NR=33.3% RR=33.3% calls=6
+ours_mechanistic_no_feedback [46/80] n2_inputs_00_11_outputs_00: VR=0.0% NR=12.5% RR=0.0% calls=24
+ours_mechanistic_no_feedback [47/80] n1_inputs_01_outputs_0: VR=18.4% NR=18.4% RR=10.5% calls=38
+ours_mechanistic_no_feedback [48/80] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_mechanistic_no_feedback [49/80] n1_inputs_11_outputs_1: VR=92.9% NR=7.1% RR=7.1% calls=28
+ours_mechanistic_no_feedback [50/80] n3_inputs_00_01_10_outputs_000: VR=6.2% NR=18.8% RR=0.0% calls=16
+ours_mechanistic_no_feedback [51/80] n3_inputs_01_10_11_outputs_101: VR=50.0% NR=50.0% RR=12.5% calls=8
+ours_mechanistic_no_feedback [52/80] n3_inputs_00_01_10_outputs_001: VR=80.0% NR=30.0% RR=10.0% calls=10
+ours_mechanistic_no_feedback [53/80] n3_inputs_00_01_11_outputs_111: VR=0.0% NR=12.5% RR=0.0% calls=8
+ours_mechanistic_no_feedback [54/80] n3_inputs_00_01_11_outputs_011: VR=25.0% NR=12.5% RR=12.5% calls=8
+ours_mechanistic_no_feedback [55/80] n2_inputs_01_10_outputs_00: VR=63.6% NR=22.7% RR=9.1% calls=22
+ours_mechanistic_no_feedback [56/80] n2_inputs_00_11_outputs_11: VR=0.0% NR=25.0% RR=0.0% calls=12
+ours_mechanistic_no_feedback [57/80] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_mechanistic_no_feedback [58/80] n2_inputs_00_11_outputs_10: VR=100.0% NR=15.4% RR=15.4% calls=13
+ours_mechanistic_no_feedback [59/80] n3_inputs_00_10_11_outputs_101: VR=0.0% NR=25.0% RR=0.0% calls=4
+ours_mechanistic_no_feedback [60/80] n4_inputs_00_01_10_11_outputs_0110: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [61/80] n1_inputs_00_outputs_1: VR=100.0% NR=12.0% RR=12.0% calls=25
+ours_mechanistic_no_feedback [62/80] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_mechanistic_no_feedback [63/80] n3_inputs_01_10_11_outputs_000: VR=61.1% NR=22.2% RR=5.6% calls=18
+ours_mechanistic_no_feedback [64/80] n2_inputs_01_11_outputs_01: VR=33.3% NR=50.0% RR=16.7% calls=12
+ours_mechanistic_no_feedback [65/80] n3_inputs_01_10_11_outputs_110: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_mechanistic_no_feedback [66/80] n3_inputs_00_01_11_outputs_010: VR=16.7% NR=50.0% RR=16.7% calls=6
+ours_mechanistic_no_feedback [67/80] n3_inputs_00_01_10_outputs_110: VR=66.7% NR=33.3% RR=16.7% calls=6
+ours_mechanistic_no_feedback [68/80] n3_inputs_01_10_11_outputs_011: VR=62.5% NR=37.5% RR=12.5% calls=8
+ours_mechanistic_no_feedback [69/80] n4_inputs_00_01_10_11_outputs_1000: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_mechanistic_no_feedback [70/80] n2_inputs_00_10_outputs_11: VR=30.8% NR=23.1% RR=7.7% calls=13
+ours_mechanistic_no_feedback [71/80] n3_inputs_00_01_10_outputs_111: VR=71.4% NR=14.3% RR=14.3% calls=7
+ours_mechanistic_no_feedback [72/80] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_mechanistic_no_feedback [73/80] n3_inputs_00_01_11_outputs_110: VR=40.0% NR=80.0% RR=40.0% calls=5
+ours_mechanistic_no_feedback [74/80] n2_inputs_00_01_outputs_00: VR=7.7% NR=23.1% RR=3.8% calls=26
+ours_mechanistic_no_feedback [75/80] n3_inputs_00_10_11_outputs_111: VR=0.0% NR=12.5% RR=0.0% calls=8
+ours_mechanistic_no_feedback [76/80] n2_inputs_10_11_outputs_10: VR=81.8% NR=27.3% RR=27.3% calls=11
+ours_mechanistic_no_feedback [77/80] n3_inputs_00_10_11_outputs_010: VR=66.7% NR=16.7% RR=16.7% calls=6
+ours_mechanistic_no_feedback [78/80] n2_inputs_01_10_outputs_11: VR=90.9% NR=9.1% RR=9.1% calls=11
+ours_mechanistic_no_feedback [79/80] n3_inputs_01_10_11_outputs_111: VR=25.0% NR=25.0% RR=12.5% calls=8
+ours_mechanistic_no_feedback [80/80] n3_inputs_00_10_11_outputs_001: VR=25.0% NR=12.5% RR=12.5% calls=8
+ours_semantic [1/80] n2_inputs_00_10_outputs_10: VR=50.0% NR=50.0% RR=25.0% calls=12
+ours_semantic [2/80] n1_inputs_01_outputs_1: VR=48.1% NR=33.3% RR=22.2% calls=27
+ours_semantic [3/80] n3_inputs_00_01_10_outputs_011: VR=75.0% NR=50.0% RR=50.0% calls=4
+ours_semantic [4/80] n2_inputs_10_11_outputs_11: VR=25.0% NR=37.5% RR=25.0% calls=16
+ours_semantic [5/80] n2_inputs_10_11_outputs_00: VR=30.8% NR=23.1% RR=15.4% calls=26
+ours_semantic [6/80] n2_inputs_00_11_outputs_01: VR=62.5% NR=68.8% RR=37.5% calls=16
+ours_semantic [7/80] n2_inputs_00_10_outputs_01: VR=28.6% NR=42.9% RR=28.6% calls=14
+ours_semantic [8/80] n4_inputs_00_01_10_11_outputs_0101: VR=80.0% NR=40.0% RR=40.0% calls=5
+ours_semantic [9/80] n2_inputs_00_01_outputs_11: VR=53.8% NR=69.2% RR=38.5% calls=13
+ours_semantic [10/80] n3_inputs_00_10_11_outputs_110: VR=60.0% NR=40.0% RR=20.0% calls=5
+ours_semantic [11/80] n1_inputs_10_outputs_0: VR=18.4% NR=23.7% RR=13.2% calls=38
+ours_semantic [12/80] n4_inputs_00_01_10_11_outputs_1110: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_semantic [13/80] n4_inputs_00_01_10_11_outputs_0111: VR=33.3% NR=33.3% RR=33.3% calls=3
+ours_semantic [14/80] n2_inputs_01_11_outputs_11: VR=18.8% NR=43.8% RR=18.8% calls=16
+ours_semantic [15/80] n2_inputs_10_11_outputs_01: VR=25.0% NR=41.7% RR=8.3% calls=12
+ours_semantic [16/80] n4_inputs_00_01_10_11_outputs_0000: VR=0.0% NR=30.8% RR=0.0% calls=13
+ours_semantic [17/80] n4_inputs_00_01_10_11_outputs_0100: VR=20.0% NR=40.0% RR=20.0% calls=5
+ours_semantic [18/80] n4_inputs_00_01_10_11_outputs_1101: VR=0.0% NR=0.0% RR=0.0% calls=3
+ours_semantic [19/80] n2_inputs_00_10_outputs_00: VR=15.4% NR=42.3% RR=11.5% calls=26
+ours_semantic [20/80] n3_inputs_00_01_11_outputs_101: VR=0.0% NR=50.0% RR=0.0% calls=4
+ours_semantic [21/80] n3_inputs_00_01_11_outputs_001: VR=50.0% NR=25.0% RR=25.0% calls=8
+ours_semantic [22/80] n3_inputs_00_01_11_outputs_100: VR=62.5% NR=50.0% RR=25.0% calls=8
+ours_semantic [23/80] n3_inputs_00_01_10_outputs_010: VR=50.0% NR=30.0% RR=30.0% calls=10
+ours_semantic [24/80] n2_inputs_01_11_outputs_10: VR=36.4% NR=63.6% RR=36.4% calls=11
+ours_semantic [25/80] n4_inputs_00_01_10_11_outputs_1111: VR=0.0% NR=40.0% RR=0.0% calls=5
+ours_semantic [26/80] n4_inputs_00_01_10_11_outputs_1011: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_semantic [27/80] n3_inputs_00_01_10_outputs_101: VR=16.7% NR=66.7% RR=16.7% calls=6
+ours_semantic [28/80] n4_inputs_00_01_10_11_outputs_1010: VR=33.3% NR=100.0% RR=33.3% calls=3
+ours_semantic [29/80] n3_inputs_00_10_11_outputs_011: VR=37.5% NR=62.5% RR=25.0% calls=8
+ours_semantic [30/80] n1_inputs_00_outputs_0: VR=17.5% NR=35.0% RR=15.0% calls=40
+ours_semantic [31/80] n3_inputs_00_10_11_outputs_000: VR=5.6% NR=38.9% RR=5.6% calls=18
+ours_semantic [32/80] n2_inputs_00_01_outputs_10: VR=41.7% NR=33.3% RR=8.3% calls=12
+ours_semantic [33/80] n3_inputs_01_10_11_outputs_010: VR=37.5% NR=25.0% RR=25.0% calls=8
+ours_semantic [34/80] n4_inputs_00_01_10_11_outputs_0010: VR=80.0% NR=20.0% RR=20.0% calls=5
+ours_semantic [35/80] n2_inputs_01_10_outputs_01: VR=43.8% NR=50.0% RR=31.2% calls=16
+ours_semantic [36/80] n3_inputs_00_10_11_outputs_100: VR=50.0% NR=25.0% RR=12.5% calls=8
+ours_semantic [37/80] n2_inputs_00_01_outputs_01: VR=42.9% NR=28.6% RR=14.3% calls=14
+ours_semantic [38/80] n4_inputs_00_01_10_11_outputs_1001: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic [39/80] n3_inputs_01_10_11_outputs_100: VR=62.5% NR=50.0% RR=37.5% calls=8
+ours_semantic [40/80] n1_inputs_11_outputs_0: VR=97.3% NR=21.6% RR=21.6% calls=37
+ours_semantic [41/80] n1_inputs_10_outputs_1: VR=59.3% NR=37.0% RR=25.9% calls=27
+ours_semantic [42/80] n2_inputs_01_11_outputs_00: VR=23.1% NR=23.1% RR=11.5% calls=26
+ours_semantic [43/80] n3_inputs_00_01_11_outputs_000: VR=0.0% NR=27.8% RR=0.0% calls=18
+ours_semantic [44/80] n2_inputs_01_10_outputs_10: VR=50.0% NR=56.2% RR=31.2% calls=16
+ours_semantic [45/80] n3_inputs_00_01_10_outputs_100: VR=66.7% NR=50.0% RR=33.3% calls=6
+ours_semantic [46/80] n2_inputs_00_11_outputs_00: VR=0.0% NR=20.8% RR=0.0% calls=24
+ours_semantic [47/80] n1_inputs_01_outputs_0: VR=7.9% NR=23.7% RR=7.9% calls=38
+ours_semantic [48/80] n4_inputs_00_01_10_11_outputs_0001: VR=66.7% NR=66.7% RR=33.3% calls=3
+ours_semantic [49/80] n1_inputs_11_outputs_1: VR=21.4% NR=42.9% RR=21.4% calls=28
+ours_semantic [50/80] n3_inputs_00_01_10_outputs_000: VR=6.2% NR=50.0% RR=6.2% calls=16
+ours_semantic [51/80] n3_inputs_01_10_11_outputs_101: VR=12.5% NR=50.0% RR=12.5% calls=8
+ours_semantic [52/80] n3_inputs_00_01_10_outputs_001: VR=50.0% NR=60.0% RR=40.0% calls=10
+ours_semantic [53/80] n3_inputs_00_01_11_outputs_111: VR=12.5% NR=50.0% RR=12.5% calls=8
+ours_semantic [54/80] n3_inputs_00_01_11_outputs_011: VR=12.5% NR=25.0% RR=12.5% calls=8
+ours_semantic [55/80] n2_inputs_01_10_outputs_00: VR=36.4% NR=36.4% RR=13.6% calls=22
+ours_semantic [56/80] n2_inputs_00_11_outputs_11: VR=0.0% NR=41.7% RR=0.0% calls=12
+ours_semantic [57/80] n4_inputs_00_01_10_11_outputs_0011: VR=80.0% NR=60.0% RR=40.0% calls=5
+ours_semantic [58/80] n2_inputs_00_11_outputs_10: VR=69.2% NR=23.1% RR=23.1% calls=13
+ours_semantic [59/80] n3_inputs_00_10_11_outputs_101: VR=0.0% NR=50.0% RR=0.0% calls=4
+ours_semantic [60/80] n4_inputs_00_01_10_11_outputs_0110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [61/80] n1_inputs_00_outputs_1: VR=64.0% NR=48.0% RR=28.0% calls=25
+ours_semantic [62/80] n4_inputs_00_01_10_11_outputs_1100: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_semantic [63/80] n3_inputs_01_10_11_outputs_000: VR=33.3% NR=16.7% RR=5.6% calls=18
+ours_semantic [64/80] n2_inputs_01_11_outputs_01: VR=16.7% NR=16.7% RR=8.3% calls=12
+ours_semantic [65/80] n3_inputs_01_10_11_outputs_110: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_semantic [66/80] n3_inputs_00_01_11_outputs_010: VR=50.0% NR=33.3% RR=33.3% calls=6
+ours_semantic [67/80] n3_inputs_00_01_10_outputs_110: VR=16.7% NR=50.0% RR=16.7% calls=6
+ours_semantic [68/80] n3_inputs_01_10_11_outputs_011: VR=12.5% NR=50.0% RR=12.5% calls=8
+ours_semantic [69/80] n4_inputs_00_01_10_11_outputs_1000: VR=80.0% NR=40.0% RR=20.0% calls=5
+ours_semantic [70/80] n2_inputs_00_10_outputs_11: VR=23.1% NR=38.5% RR=15.4% calls=13
+ours_semantic [71/80] n3_inputs_00_01_10_outputs_111: VR=14.3% NR=57.1% RR=14.3% calls=7
+ours_semantic [72/80] n3_inputs_01_10_11_outputs_001: VR=25.0% NR=50.0% RR=25.0% calls=4
+ours_semantic [73/80] n3_inputs_00_01_11_outputs_110: VR=40.0% NR=60.0% RR=40.0% calls=5
+ours_semantic [74/80] n2_inputs_00_01_outputs_00: VR=7.7% NR=38.5% RR=7.7% calls=26
+ours_semantic [75/80] n3_inputs_00_10_11_outputs_111: VR=0.0% NR=50.0% RR=0.0% calls=8
+ours_semantic [76/80] n2_inputs_10_11_outputs_10: VR=54.5% NR=36.4% RR=18.2% calls=11
+ours_semantic [77/80] n3_inputs_00_10_11_outputs_010: VR=33.3% NR=33.3% RR=16.7% calls=6
+ours_semantic [78/80] n2_inputs_01_10_outputs_11: VR=18.2% NR=36.4% RR=18.2% calls=11
+ours_semantic [79/80] n3_inputs_01_10_11_outputs_111: VR=50.0% NR=37.5% RR=25.0% calls=8
+ours_semantic [80/80] n3_inputs_00_10_11_outputs_001: VR=37.5% NR=50.0% RR=12.5% calls=8
+ours_semantic_no_feedback [1/80] n2_inputs_00_10_outputs_10: VR=75.0% NR=25.0% RR=16.7% calls=12
+ours_semantic_no_feedback [2/80] n1_inputs_01_outputs_1: VR=100.0% NR=11.1% RR=11.1% calls=27
+ours_semantic_no_feedback [3/80] n3_inputs_00_01_10_outputs_011: VR=50.0% NR=50.0% RR=50.0% calls=4
+ours_semantic_no_feedback [4/80] n2_inputs_10_11_outputs_11: VR=81.2% NR=18.8% RR=12.5% calls=16
+ours_semantic_no_feedback [5/80] n2_inputs_10_11_outputs_00: VR=65.4% NR=19.2% RR=7.7% calls=26
+ours_semantic_no_feedback [6/80] n2_inputs_00_11_outputs_01: VR=100.0% NR=12.5% RR=12.5% calls=16
+ours_semantic_no_feedback [7/80] n2_inputs_00_10_outputs_01: VR=100.0% NR=7.1% RR=7.1% calls=14
+ours_semantic_no_feedback [8/80] n4_inputs_00_01_10_11_outputs_0101: VR=60.0% NR=40.0% RR=20.0% calls=5
+ours_semantic_no_feedback [9/80] n2_inputs_00_01_outputs_11: VR=76.9% NR=15.4% RR=15.4% calls=13
+ours_semantic_no_feedback [10/80] n3_inputs_00_10_11_outputs_110: VR=40.0% NR=60.0% RR=20.0% calls=5
+ours_semantic_no_feedback [11/80] n1_inputs_10_outputs_0: VR=47.4% NR=10.5% RR=5.3% calls=38
+ours_semantic_no_feedback [12/80] n4_inputs_00_01_10_11_outputs_1110: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [13/80] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_semantic_no_feedback [14/80] n2_inputs_01_11_outputs_11: VR=50.0% NR=37.5% RR=18.8% calls=16
+ours_semantic_no_feedback [15/80] n2_inputs_10_11_outputs_01: VR=33.3% NR=16.7% RR=8.3% calls=12
+ours_semantic_no_feedback [16/80] n4_inputs_00_01_10_11_outputs_0000: VR=0.0% NR=7.7% RR=0.0% calls=13
+ours_semantic_no_feedback [17/80] n4_inputs_00_01_10_11_outputs_0100: VR=40.0% NR=40.0% RR=20.0% calls=5
+ours_semantic_no_feedback [18/80] n4_inputs_00_01_10_11_outputs_1101: VR=33.3% NR=33.3% RR=33.3% calls=3
+ours_semantic_no_feedback [19/80] n2_inputs_00_10_outputs_00: VR=15.4% NR=23.1% RR=7.7% calls=26
+ours_semantic_no_feedback [20/80] n3_inputs_00_01_11_outputs_101: VR=0.0% NR=75.0% RR=0.0% calls=4
+ours_semantic_no_feedback [21/80] n3_inputs_00_01_11_outputs_001: VR=62.5% NR=50.0% RR=25.0% calls=8
+ours_semantic_no_feedback [22/80] n3_inputs_00_01_11_outputs_100: VR=50.0% NR=37.5% RR=12.5% calls=8
+ours_semantic_no_feedback [23/80] n3_inputs_00_01_10_outputs_010: VR=70.0% NR=20.0% RR=10.0% calls=10
+ours_semantic_no_feedback [24/80] n2_inputs_01_11_outputs_10: VR=90.9% NR=18.2% RR=18.2% calls=11
+ours_semantic_no_feedback [25/80] n4_inputs_00_01_10_11_outputs_1111: VR=0.0% NR=20.0% RR=0.0% calls=5
+ours_semantic_no_feedback [26/80] n4_inputs_00_01_10_11_outputs_1011: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_semantic_no_feedback [27/80] n3_inputs_00_01_10_outputs_101: VR=50.0% NR=33.3% RR=16.7% calls=6
+ours_semantic_no_feedback [28/80] n4_inputs_00_01_10_11_outputs_1010: VR=66.7% NR=66.7% RR=33.3% calls=3
+ours_semantic_no_feedback [29/80] n3_inputs_00_10_11_outputs_011: VR=87.5% NR=25.0% RR=12.5% calls=8
+ours_semantic_no_feedback [30/80] n1_inputs_00_outputs_0: VR=12.5% NR=10.0% RR=2.5% calls=40
+ours_semantic_no_feedback [31/80] n3_inputs_00_10_11_outputs_000: VR=5.6% NR=27.8% RR=5.6% calls=18
+ours_semantic_no_feedback [32/80] n2_inputs_00_01_outputs_10: VR=41.7% NR=33.3% RR=16.7% calls=12
+ours_semantic_no_feedback [33/80] n3_inputs_01_10_11_outputs_010: VR=37.5% NR=37.5% RR=12.5% calls=8
+ours_semantic_no_feedback [34/80] n4_inputs_00_01_10_11_outputs_0010: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_semantic_no_feedback [35/80] n2_inputs_01_10_outputs_01: VR=43.8% NR=31.2% RR=12.5% calls=16
+ours_semantic_no_feedback [36/80] n3_inputs_00_10_11_outputs_100: VR=87.5% NR=37.5% RR=25.0% calls=8
+ours_semantic_no_feedback [37/80] n2_inputs_00_01_outputs_01: VR=71.4% NR=28.6% RR=14.3% calls=14
+ours_semantic_no_feedback [38/80] n4_inputs_00_01_10_11_outputs_1001: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [39/80] n3_inputs_01_10_11_outputs_100: VR=37.5% NR=50.0% RR=25.0% calls=8
+ours_semantic_no_feedback [40/80] n1_inputs_11_outputs_0: VR=100.0% NR=8.1% RR=8.1% calls=37
+ours_semantic_no_feedback [41/80] n1_inputs_10_outputs_1: VR=100.0% NR=7.4% RR=7.4% calls=27
+ours_semantic_no_feedback [42/80] n2_inputs_01_11_outputs_00: VR=15.4% NR=26.9% RR=11.5% calls=26
+ours_semantic_no_feedback [43/80] n3_inputs_00_01_11_outputs_000: VR=11.1% NR=22.2% RR=5.6% calls=18
+ours_semantic_no_feedback [44/80] n2_inputs_01_10_outputs_10: VR=6.2% NR=6.2% RR=6.2% calls=16
+ours_semantic_no_feedback [45/80] n3_inputs_00_01_10_outputs_100: VR=66.7% NR=33.3% RR=16.7% calls=6
+ours_semantic_no_feedback [46/80] n2_inputs_00_11_outputs_00: VR=4.2% NR=29.2% RR=4.2% calls=24
+ours_semantic_no_feedback [47/80] n1_inputs_01_outputs_0: VR=23.7% NR=15.8% RR=7.9% calls=38
+ours_semantic_no_feedback [48/80] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_semantic_no_feedback [49/80] n1_inputs_11_outputs_1: VR=92.9% NR=14.3% RR=10.7% calls=28
+ours_semantic_no_feedback [50/80] n3_inputs_00_01_10_outputs_000: VR=12.5% NR=37.5% RR=6.2% calls=16
+ours_semantic_no_feedback [51/80] n3_inputs_01_10_11_outputs_101: VR=37.5% NR=50.0% RR=12.5% calls=8
+ours_semantic_no_feedback [52/80] n3_inputs_00_01_10_outputs_001: VR=20.0% NR=50.0% RR=20.0% calls=10
+ours_semantic_no_feedback [53/80] n3_inputs_00_01_11_outputs_111: VR=0.0% NR=25.0% RR=0.0% calls=8
+ours_semantic_no_feedback [54/80] n3_inputs_00_01_11_outputs_011: VR=62.5% NR=37.5% RR=25.0% calls=8
+ours_semantic_no_feedback [55/80] n2_inputs_01_10_outputs_00: VR=81.8% NR=27.3% RR=13.6% calls=22
+ours_semantic_no_feedback [56/80] n2_inputs_00_11_outputs_11: VR=0.0% NR=25.0% RR=0.0% calls=12
+ours_semantic_no_feedback [57/80] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_semantic_no_feedback [58/80] n2_inputs_00_11_outputs_10: VR=92.3% NR=23.1% RR=23.1% calls=13
+ours_semantic_no_feedback [59/80] n3_inputs_00_10_11_outputs_101: VR=0.0% NR=50.0% RR=0.0% calls=4
+ours_semantic_no_feedback [60/80] n4_inputs_00_01_10_11_outputs_0110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [61/80] n1_inputs_00_outputs_1: VR=92.0% NR=12.0% RR=12.0% calls=25
+ours_semantic_no_feedback [62/80] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_semantic_no_feedback [63/80] n3_inputs_01_10_11_outputs_000: VR=61.1% NR=22.2% RR=11.1% calls=18
+ours_semantic_no_feedback [64/80] n2_inputs_01_11_outputs_01: VR=91.7% NR=25.0% RR=16.7% calls=12
+ours_semantic_no_feedback [65/80] n3_inputs_01_10_11_outputs_110: VR=100.0% NR=66.7% RR=66.7% calls=3
+ours_semantic_no_feedback [66/80] n3_inputs_00_01_11_outputs_010: VR=16.7% NR=66.7% RR=16.7% calls=6
+ours_semantic_no_feedback [67/80] n3_inputs_00_01_10_outputs_110: VR=50.0% NR=66.7% RR=16.7% calls=6
+ours_semantic_no_feedback [68/80] n3_inputs_01_10_11_outputs_011: VR=75.0% NR=50.0% RR=25.0% calls=8
+ours_semantic_no_feedback [69/80] n4_inputs_00_01_10_11_outputs_1000: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_semantic_no_feedback [70/80] n2_inputs_00_10_outputs_11: VR=38.5% NR=30.8% RR=7.7% calls=13
+ours_semantic_no_feedback [71/80] n3_inputs_00_01_10_outputs_111: VR=28.6% NR=42.9% RR=28.6% calls=7
+ours_semantic_no_feedback [72/80] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_semantic_no_feedback [73/80] n3_inputs_00_01_11_outputs_110: VR=20.0% NR=60.0% RR=20.0% calls=5
+ours_semantic_no_feedback [74/80] n2_inputs_00_01_outputs_00: VR=15.4% NR=23.1% RR=7.7% calls=26
+ours_semantic_no_feedback [75/80] n3_inputs_00_10_11_outputs_111: VR=0.0% NR=25.0% RR=0.0% calls=8
+ours_semantic_no_feedback [76/80] n2_inputs_10_11_outputs_10: VR=81.8% NR=27.3% RR=18.2% calls=11
+ours_semantic_no_feedback [77/80] n3_inputs_00_10_11_outputs_010: VR=33.3% NR=50.0% RR=16.7% calls=6
+ours_semantic_no_feedback [78/80] n2_inputs_01_10_outputs_11: VR=72.7% NR=27.3% RR=18.2% calls=11
+ours_semantic_no_feedback [79/80] n3_inputs_01_10_11_outputs_111: VR=50.0% NR=50.0% RR=25.0% calls=8
+ours_semantic_no_feedback [80/80] n3_inputs_00_10_11_outputs_001: VR=0.0% NR=12.5% RR=0.0% calls=8
+ours_none [1/80] n2_inputs_00_10_outputs_10: VR=91.7% NR=8.3% RR=8.3% calls=12
+ours_none [2/80] n1_inputs_01_outputs_1: VR=96.3% NR=11.1% RR=11.1% calls=27
+ours_none [3/80] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_none [4/80] n2_inputs_10_11_outputs_11: VR=100.0% NR=6.2% RR=6.2% calls=16
+ours_none [5/80] n2_inputs_10_11_outputs_00: VR=100.0% NR=3.8% RR=3.8% calls=26
+ours_none [6/80] n2_inputs_00_11_outputs_01: VR=100.0% NR=6.2% RR=6.2% calls=16
+ours_none [7/80] n2_inputs_00_10_outputs_01: VR=100.0% NR=7.1% RR=7.1% calls=14
+ours_none [8/80] n4_inputs_00_01_10_11_outputs_0101: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_none [9/80] n2_inputs_00_01_outputs_11: VR=100.0% NR=7.7% RR=7.7% calls=13
+ours_none [10/80] n3_inputs_00_10_11_outputs_110: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_none [11/80] n1_inputs_10_outputs_0: VR=100.0% NR=2.6% RR=2.6% calls=38
+ours_none [12/80] n4_inputs_00_01_10_11_outputs_1110: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_none [13/80] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none [14/80] n2_inputs_01_11_outputs_11: VR=87.5% NR=18.8% RR=6.2% calls=16
+ours_none [15/80] n2_inputs_10_11_outputs_01: VR=100.0% NR=8.3% RR=8.3% calls=12
+ours_none [16/80] n4_inputs_00_01_10_11_outputs_0000: VR=0.0% NR=30.8% RR=0.0% calls=13
+ours_none [17/80] n4_inputs_00_01_10_11_outputs_0100: VR=0.0% NR=60.0% RR=0.0% calls=5
+ours_none [18/80] n4_inputs_00_01_10_11_outputs_1101: VR=0.0% NR=33.3% RR=0.0% calls=3
+ours_none [19/80] n2_inputs_00_10_outputs_00: VR=92.3% NR=11.5% RR=3.8% calls=26
+ours_none [20/80] n3_inputs_00_01_11_outputs_101: VR=0.0% NR=100.0% RR=0.0% calls=4
+ours_none [21/80] n3_inputs_00_01_11_outputs_001: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_none [22/80] n3_inputs_00_01_11_outputs_100: VR=75.0% NR=37.5% RR=12.5% calls=8
+ours_none [23/80] n3_inputs_00_01_10_outputs_010: VR=80.0% NR=20.0% RR=10.0% calls=10
+ours_none [24/80] n2_inputs_01_11_outputs_10: VR=81.8% NR=18.2% RR=9.1% calls=11
+ours_none [25/80] n4_inputs_00_01_10_11_outputs_1111: VR=0.0% NR=80.0% RR=0.0% calls=5
+ours_none [26/80] n4_inputs_00_01_10_11_outputs_1011: VR=66.7% NR=66.7% RR=33.3% calls=3
+ours_none [27/80] n3_inputs_00_01_10_outputs_101: VR=50.0% NR=66.7% RR=16.7% calls=6
+ours_none [28/80] n4_inputs_00_01_10_11_outputs_1010: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_none [29/80] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_none [30/80] n1_inputs_00_outputs_0: VR=87.5% NR=7.5% RR=2.5% calls=40
+ours_none [31/80] n3_inputs_00_10_11_outputs_000: VR=0.0% NR=22.2% RR=0.0% calls=18
+ours_none [32/80] n2_inputs_00_01_outputs_10: VR=91.7% NR=8.3% RR=8.3% calls=12
+ours_none [33/80] n3_inputs_01_10_11_outputs_010: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_none [34/80] n4_inputs_00_01_10_11_outputs_0010: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_none [35/80] n2_inputs_01_10_outputs_01: VR=87.5% NR=6.2% RR=6.2% calls=16
+ours_none [36/80] n3_inputs_00_10_11_outputs_100: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_none [37/80] n2_inputs_00_01_outputs_01: VR=100.0% NR=7.1% RR=7.1% calls=14
+ours_none [38/80] n4_inputs_00_01_10_11_outputs_1001: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_none [39/80] n3_inputs_01_10_11_outputs_100: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_none [40/80] n1_inputs_11_outputs_0: VR=100.0% NR=5.4% RR=5.4% calls=37
+ours_none [41/80] n1_inputs_10_outputs_1: VR=100.0% NR=3.7% RR=3.7% calls=27
+ours_none [42/80] n2_inputs_01_11_outputs_00: VR=100.0% NR=3.8% RR=3.8% calls=26
+ours_none [43/80] n3_inputs_00_01_11_outputs_000: VR=0.0% NR=27.8% RR=0.0% calls=18
+ours_none [44/80] n2_inputs_01_10_outputs_10: VR=100.0% NR=6.2% RR=6.2% calls=16
+ours_none [45/80] n3_inputs_00_01_10_outputs_100: VR=83.3% NR=33.3% RR=16.7% calls=6
+ours_none [46/80] n2_inputs_00_11_outputs_00: VR=0.0% NR=33.3% RR=0.0% calls=24
+ours_none [47/80] n1_inputs_01_outputs_0: VR=100.0% NR=2.6% RR=2.6% calls=38
+ours_none [48/80] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none [49/80] n1_inputs_11_outputs_1: VR=96.4% NR=7.1% RR=7.1% calls=28
+ours_none [50/80] n3_inputs_00_01_10_outputs_000: VR=75.0% NR=18.8% RR=6.2% calls=16
+ours_none [51/80] n3_inputs_01_10_11_outputs_101: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_none [52/80] n3_inputs_00_01_10_outputs_001: VR=100.0% NR=10.0% RR=10.0% calls=10
+ours_none [53/80] n3_inputs_00_01_11_outputs_111: VR=37.5% NR=50.0% RR=12.5% calls=8
+ours_none [54/80] n3_inputs_00_01_11_outputs_011: VR=87.5% NR=25.0% RR=12.5% calls=8
+ours_none [55/80] n2_inputs_01_10_outputs_00: VR=100.0% NR=4.5% RR=4.5% calls=22
+ours_none [56/80] n2_inputs_00_11_outputs_11: VR=0.0% NR=33.3% RR=0.0% calls=12
+ours_none [57/80] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_none [58/80] n2_inputs_00_11_outputs_10: VR=100.0% NR=15.4% RR=15.4% calls=13
+ours_none [59/80] n3_inputs_00_10_11_outputs_101: VR=50.0% NR=75.0% RR=25.0% calls=4
+ours_none [60/80] n4_inputs_00_01_10_11_outputs_0110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [61/80] n1_inputs_00_outputs_1: VR=100.0% NR=4.0% RR=4.0% calls=25
+ours_none [62/80] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none [63/80] n3_inputs_01_10_11_outputs_000: VR=94.4% NR=11.1% RR=5.6% calls=18
+ours_none [64/80] n2_inputs_01_11_outputs_01: VR=100.0% NR=8.3% RR=8.3% calls=12
+ours_none [65/80] n3_inputs_01_10_11_outputs_110: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_none [66/80] n3_inputs_00_01_11_outputs_010: VR=83.3% NR=33.3% RR=16.7% calls=6
+ours_none [67/80] n3_inputs_00_01_10_outputs_110: VR=100.0% NR=16.7% RR=16.7% calls=6
+ours_none [68/80] n3_inputs_01_10_11_outputs_011: VR=87.5% NR=25.0% RR=12.5% calls=8
+ours_none [69/80] n4_inputs_00_01_10_11_outputs_1000: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_none [70/80] n2_inputs_00_10_outputs_11: VR=69.2% NR=30.8% RR=7.7% calls=13
+ours_none [71/80] n3_inputs_00_01_10_outputs_111: VR=100.0% NR=14.3% RR=14.3% calls=7
+ours_none [72/80] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_none [73/80] n3_inputs_00_01_11_outputs_110: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_none [74/80] n2_inputs_00_01_outputs_00: VR=92.3% NR=11.5% RR=3.8% calls=26
+ours_none [75/80] n3_inputs_00_10_11_outputs_111: VR=0.0% NR=25.0% RR=0.0% calls=8
+ours_none [76/80] n2_inputs_10_11_outputs_10: VR=100.0% NR=9.1% RR=9.1% calls=11
+ours_none [77/80] n3_inputs_00_10_11_outputs_010: VR=100.0% NR=16.7% RR=16.7% calls=6
+ours_none [78/80] n2_inputs_01_10_outputs_11: VR=100.0% NR=9.1% RR=9.1% calls=11
+ours_none [79/80] n3_inputs_01_10_11_outputs_111: VR=75.0% NR=25.0% RR=12.5% calls=8
+ours_none [80/80] n3_inputs_00_10_11_outputs_001: VR=87.5% NR=12.5% RR=12.5% calls=8
+ours_none_no_feedback [1/80] n2_inputs_00_10_outputs_10: VR=33.3% NR=33.3% RR=16.7% calls=12
+ours_none_no_feedback [2/80] n1_inputs_01_outputs_1: VR=85.2% NR=14.8% RR=11.1% calls=27
+ours_none_no_feedback [3/80] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_none_no_feedback [4/80] n2_inputs_10_11_outputs_11: VR=93.8% NR=12.5% RR=12.5% calls=16
+ours_none_no_feedback [5/80] n2_inputs_10_11_outputs_00: VR=65.4% NR=11.5% RR=7.7% calls=26
+ours_none_no_feedback [6/80] n2_inputs_00_11_outputs_01: VR=93.8% NR=12.5% RR=12.5% calls=16
+ours_none_no_feedback [7/80] n2_inputs_00_10_outputs_01: VR=78.6% NR=14.3% RR=7.1% calls=14
+ours_none_no_feedback [8/80] n4_inputs_00_01_10_11_outputs_0101: VR=80.0% NR=20.0% RR=20.0% calls=5
+ours_none_no_feedback [9/80] n2_inputs_00_01_outputs_11: VR=100.0% NR=15.4% RR=15.4% calls=13
+ours_none_no_feedback [10/80] n3_inputs_00_10_11_outputs_110: VR=20.0% NR=60.0% RR=20.0% calls=5
+ours_none_no_feedback [11/80] n1_inputs_10_outputs_0: VR=73.7% NR=10.5% RR=7.9% calls=38
+ours_none_no_feedback [12/80] n4_inputs_00_01_10_11_outputs_1110: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_none_no_feedback [13/80] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none_no_feedback [14/80] n2_inputs_01_11_outputs_11: VR=18.8% NR=31.2% RR=12.5% calls=16
+ours_none_no_feedback [15/80] n2_inputs_10_11_outputs_01: VR=25.0% NR=16.7% RR=8.3% calls=12
+ours_none_no_feedback [16/80] n4_inputs_00_01_10_11_outputs_0000: VR=0.0% NR=23.1% RR=0.0% calls=13
+ours_none_no_feedback [17/80] n4_inputs_00_01_10_11_outputs_0100: VR=0.0% NR=40.0% RR=0.0% calls=5
+ours_none_no_feedback [18/80] n4_inputs_00_01_10_11_outputs_1101: VR=33.3% NR=100.0% RR=33.3% calls=3
+ours_none_no_feedback [19/80] n2_inputs_00_10_outputs_00: VR=0.0% NR=15.4% RR=0.0% calls=26
+ours_none_no_feedback [20/80] n3_inputs_00_01_11_outputs_101: VR=0.0% NR=50.0% RR=0.0% calls=4
+ours_none_no_feedback [21/80] n3_inputs_00_01_11_outputs_001: VR=37.5% NR=37.5% RR=25.0% calls=8
+ours_none_no_feedback [22/80] n3_inputs_00_01_11_outputs_100: VR=50.0% NR=50.0% RR=25.0% calls=8
+ours_none_no_feedback [23/80] n3_inputs_00_01_10_outputs_010: VR=50.0% NR=20.0% RR=10.0% calls=10
+ours_none_no_feedback [24/80] n2_inputs_01_11_outputs_10: VR=72.7% NR=27.3% RR=18.2% calls=11
+ours_none_no_feedback [25/80] n4_inputs_00_01_10_11_outputs_1111: VR=0.0% NR=20.0% RR=0.0% calls=5
+ours_none_no_feedback [26/80] n4_inputs_00_01_10_11_outputs_1011: VR=0.0% NR=66.7% RR=0.0% calls=3
+ours_none_no_feedback [27/80] n3_inputs_00_01_10_outputs_101: VR=33.3% NR=50.0% RR=16.7% calls=6
+ours_none_no_feedback [28/80] n4_inputs_00_01_10_11_outputs_1010: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_none_no_feedback [29/80] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=12.5% RR=12.5% calls=8
+ours_none_no_feedback [30/80] n1_inputs_00_outputs_0: VR=5.0% NR=10.0% RR=2.5% calls=40
+ours_none_no_feedback [31/80] n3_inputs_00_10_11_outputs_000: VR=0.0% NR=22.2% RR=0.0% calls=18
+ours_none_no_feedback [32/80] n2_inputs_00_01_outputs_10: VR=33.3% NR=33.3% RR=16.7% calls=12
+ours_none_no_feedback [33/80] n3_inputs_01_10_11_outputs_010: VR=75.0% NR=37.5% RR=25.0% calls=8
+ours_none_no_feedback [34/80] n4_inputs_00_01_10_11_outputs_0010: VR=40.0% NR=40.0% RR=20.0% calls=5
+ours_none_no_feedback [35/80] n2_inputs_01_10_outputs_01: VR=37.5% NR=12.5% RR=12.5% calls=16
+ours_none_no_feedback [36/80] n3_inputs_00_10_11_outputs_100: VR=62.5% NR=62.5% RR=37.5% calls=8
+ours_none_no_feedback [37/80] n2_inputs_00_01_outputs_01: VR=100.0% NR=7.1% RR=7.1% calls=14
+ours_none_no_feedback [38/80] n4_inputs_00_01_10_11_outputs_1001: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [39/80] n3_inputs_01_10_11_outputs_100: VR=25.0% NR=50.0% RR=12.5% calls=8
+ours_none_no_feedback [40/80] n1_inputs_11_outputs_0: VR=83.8% NR=13.5% RR=10.8% calls=37
+ours_none_no_feedback [41/80] n1_inputs_10_outputs_1: VR=96.3% NR=11.1% RR=11.1% calls=27
+ours_none_no_feedback [42/80] n2_inputs_01_11_outputs_00: VR=7.7% NR=15.4% RR=7.7% calls=26
+ours_none_no_feedback [43/80] n3_inputs_00_01_11_outputs_000: VR=11.1% NR=27.8% RR=5.6% calls=18
+ours_none_no_feedback [44/80] n2_inputs_01_10_outputs_10: VR=81.2% NR=12.5% RR=12.5% calls=16
+ours_none_no_feedback [45/80] n3_inputs_00_01_10_outputs_100: VR=33.3% NR=66.7% RR=33.3% calls=6
+ours_none_no_feedback [46/80] n2_inputs_00_11_outputs_00: VR=0.0% NR=12.5% RR=0.0% calls=24
+ours_none_no_feedback [47/80] n1_inputs_01_outputs_0: VR=34.2% NR=13.2% RR=7.9% calls=38
+ours_none_no_feedback [48/80] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none_no_feedback [49/80] n1_inputs_11_outputs_1: VR=89.3% NR=10.7% RR=10.7% calls=28
+ours_none_no_feedback [50/80] n3_inputs_00_01_10_outputs_000: VR=12.5% NR=31.2% RR=6.2% calls=16
+ours_none_no_feedback [51/80] n3_inputs_01_10_11_outputs_101: VR=62.5% NR=37.5% RR=25.0% calls=8
+ours_none_no_feedback [52/80] n3_inputs_00_01_10_outputs_001: VR=30.0% NR=40.0% RR=20.0% calls=10
+ours_none_no_feedback [53/80] n3_inputs_00_01_11_outputs_111: VR=0.0% NR=37.5% RR=0.0% calls=8
+ours_none_no_feedback [54/80] n3_inputs_00_01_11_outputs_011: VR=100.0% NR=25.0% RR=25.0% calls=8
+ours_none_no_feedback [55/80] n2_inputs_01_10_outputs_00: VR=63.6% NR=13.6% RR=9.1% calls=22
+ours_none_no_feedback [56/80] n2_inputs_00_11_outputs_11: VR=0.0% NR=16.7% RR=0.0% calls=12
+ours_none_no_feedback [57/80] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=20.0% RR=20.0% calls=5
+ours_none_no_feedback [58/80] n2_inputs_00_11_outputs_10: VR=92.3% NR=30.8% RR=30.8% calls=13
+ours_none_no_feedback [59/80] n3_inputs_00_10_11_outputs_101: VR=0.0% NR=50.0% RR=0.0% calls=4
+ours_none_no_feedback [60/80] n4_inputs_00_01_10_11_outputs_0110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [61/80] n1_inputs_00_outputs_1: VR=96.0% NR=8.0% RR=8.0% calls=25
+ours_none_no_feedback [62/80] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none_no_feedback [63/80] n3_inputs_01_10_11_outputs_000: VR=77.8% NR=16.7% RR=5.6% calls=18
+ours_none_no_feedback [64/80] n2_inputs_01_11_outputs_01: VR=75.0% NR=16.7% RR=8.3% calls=12
+ours_none_no_feedback [65/80] n3_inputs_01_10_11_outputs_110: VR=0.0% NR=33.3% RR=0.0% calls=3
+ours_none_no_feedback [66/80] n3_inputs_00_01_11_outputs_010: VR=16.7% NR=83.3% RR=16.7% calls=6
+ours_none_no_feedback [67/80] n3_inputs_00_01_10_outputs_110: VR=50.0% NR=33.3% RR=16.7% calls=6
+ours_none_no_feedback [68/80] n3_inputs_01_10_11_outputs_011: VR=62.5% NR=37.5% RR=12.5% calls=8
+ours_none_no_feedback [69/80] n4_inputs_00_01_10_11_outputs_1000: VR=80.0% NR=40.0% RR=20.0% calls=5
+ours_none_no_feedback [70/80] n2_inputs_00_10_outputs_11: VR=15.4% NR=23.1% RR=15.4% calls=13
+ours_none_no_feedback [71/80] n3_inputs_00_01_10_outputs_111: VR=42.9% NR=42.9% RR=14.3% calls=7
+ours_none_no_feedback [72/80] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_none_no_feedback [73/80] n3_inputs_00_01_11_outputs_110: VR=80.0% NR=40.0% RR=40.0% calls=5
+ours_none_no_feedback [74/80] n2_inputs_00_01_outputs_00: VR=69.2% NR=15.4% RR=3.8% calls=26
+ours_none_no_feedback [75/80] n3_inputs_00_10_11_outputs_111: VR=0.0% NR=37.5% RR=0.0% calls=8
+ours_none_no_feedback [76/80] n2_inputs_10_11_outputs_10: VR=90.9% NR=27.3% RR=27.3% calls=11
+ours_none_no_feedback [77/80] n3_inputs_00_10_11_outputs_010: VR=50.0% NR=33.3% RR=16.7% calls=6
+ours_none_no_feedback [78/80] n2_inputs_01_10_outputs_11: VR=81.8% NR=27.3% RR=27.3% calls=11
+ours_none_no_feedback [79/80] n3_inputs_01_10_11_outputs_111: VR=50.0% NR=25.0% RR=12.5% calls=8
+ours_none_no_feedback [80/80] n3_inputs_00_10_11_outputs_001: VR=87.5% NR=25.0% RR=12.5% calls=8
+{
+  "baseline": {
+    "validity_rate": 0.5170302692753351,
+    "novelty_rate": 0.32769269798546113,
+    "recovery_rate": 0.14263173696232906,
+    "attempts": 12.1875,
+    "tasks": 80,
+    "calls": 975,
+    "usage": {
+      "prompt_tokens": 159315,
+      "completion_tokens": 5474,
+      "total_tokens": 164789
+    },
+    "api_elapsed_seconds": 1623.1025422075763
+  },
+  "ours_mechanistic": {
+    "validity_rate": 0.3212281840554867,
+    "novelty_rate": 0.46852793387990754,
+    "recovery_rate": 0.17379162462386147,
+    "attempts": 12.1875,
+    "tasks": 80,
+    "calls": 975,
+    "usage": {
+      "prompt_tokens": 224241,
+      "completion_tokens": 5857,
+      "total_tokens": 230098
+    },
+    "api_elapsed_seconds": 1604.3936158334836
+  },
+  "ours_mechanistic_no_feedback": {
+    "validity_rate": 0.5383258088767957,
+    "novelty_rate": 0.2841683313443182,
+    "recovery_rate": 0.14371044554103765,
+    "attempts": 12.1875,
+    "tasks": 80,
+    "calls": 975,
+    "usage": {
+      "prompt_tokens": 193440,
+      "completion_tokens": 6134,
+      "total_tokens": 199574
+    },
+    "api_elapsed_seconds": 1525.5329721923918
+  },
+  "ours_semantic": {
+    "validity_rate": 0.3367708802593671,
+    "novelty_rate": 0.42234097445775076,
+    "recovery_rate": 0.19151402089231034,
+    "attempts": 12.1875,
+    "tasks": 80,
+    "calls": 975,
+    "usage": {
+      "prompt_tokens": 192838,
+      "completion_tokens": 6158,
+      "total_tokens": 198996
+    },
+    "api_elapsed_seconds": 1143.8426263886504
+  },
+  "ours_semantic_no_feedback": {
+    "validity_rate": 0.5212217977563373,
+    "novelty_rate": 0.30975031880130566,
+    "recovery_rate": 0.1578027597813782,
+    "attempts": 12.1875,
+    "tasks": 80,
+    "calls": 975,
+    "usage": {
+      "prompt_tokens": 163215,
+      "completion_tokens": 6011,
+      "total_tokens": 169226
+    },
+    "api_elapsed_seconds": 922.7428722283803
+  },
+  "ours_none": {
+    "validity_rate": 0.767541705979206,
+    "novelty_rate": 0.2282419768209242,
+    "recovery_rate": 0.10879898925293663,
+    "attempts": 12.1875,
+    "tasks": 80,
+    "calls": 975,
+    "usage": {
+      "prompt_tokens": 210171,
+      "completion_tokens": 4629,
+      "total_tokens": 214800
+    },
+    "api_elapsed_seconds": 640.8430132479407
+  },
+  "ours_none_no_feedback": {
+    "validity_rate": 0.5016067607251818,
+    "novelty_rate": 0.29061394109420424,
+    "recovery_rate": 0.1378404264210185,
+    "attempts": 12.1875,
+    "tasks": 80,
+    "calls": 975,
+    "usage": {
+      "prompt_tokens": 159315,
+      "completion_tokens": 5023,
+      "total_tokens": 164338
+    },
+    "api_elapsed_seconds": 672.6477870773524
+  }
+}

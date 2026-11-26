@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "runs": 3,
+  "new_runs": 2,
+  "total_calls": 1890,
+  "new_calls": 1260,
+  "all_runs_replayed": true,
+  "all_frozen_settings_and_task_orders_match": true,
+  "original_run": "qwen38_27b_nvfp4_20261126",
+  "finish_reasons_by_run": {
+    "run_01": {
+      "stop": 626,
+      "length": 4
+    },
+    "run_02": {
+      "stop": 626,
+      "length": 4
+    },
+    "run_03": {
+      "stop": 627,
+      "length": 3
+    }
+  }
+}

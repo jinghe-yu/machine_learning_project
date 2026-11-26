@@ -1,0 +1,28 @@
+{
+  "repo_commit": "cc6940c1c501185de844a6c48217f1f2f82f11a4",
+  "dataset": "our_method/data/boolean_full_depth2.json",
+  "dataset_sha256": "441e1d4d96a0f6f987e0355a03d4f66869b99dcab5d298b6343cbee6b0356378",
+  "model_id": "qwen3.8-27b",
+  "model_root": "/opt/data/private/isaaclab/ec4300/hf-cache/Qwen3.8-27B-NVFP4",
+  "quantization": "NVFP4",
+  "engine": "vLLM",
+  "gpu": "RTX 5090",
+  "task_seed": 42,
+  "decoding_seed": null,
+  "temperature": 0.7,
+  "max_tokens": 256,
+  "tasks_per_method": 80,
+  "calls_per_method": 975,
+  "total_calls": 6825,
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ],
+  "source_snapshot": "source_and_data.tar.gz",
+  "verification": "verification.json"
+}

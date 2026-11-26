@@ -1,0 +1,9 @@
+{
+  "pid": 28799,
+  "root": "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_20261126_repeats",
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_20261126_repeats/repeat_seven.py"
+  ]
+}

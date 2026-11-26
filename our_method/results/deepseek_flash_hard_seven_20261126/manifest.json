@@ -1,0 +1,95 @@
+{
+  "mode": "live",
+  "git_commit": "93907cd515ff86c9888469dd50694f88782b3be2",
+  "sampler_sha256": "2a569eda2f555279f4d020db3dc4c65f7894c337ab278686f772c76699d814c4",
+  "scorer_sha256": "9547f87630761cc6c84710c20cfbd2b8e6c075dc981e46f3209fdde77155b9e6",
+  "depth_runner_sha256": "7cbef2cc2664d7abf427bc9bbf1b1b7a66880ba60a1a3d11dd9d7c9089715e49",
+  "runner_sha256": "0336ac7051388f424fb7eb039e4a09687e3d0e3fdc54d9a5b939d2af7a91fde7",
+  "model_id": "deepseek-flash",
+  "thinking": "disabled",
+  "temperature": 0.7,
+  "max_tokens": 128,
+  "task_seed": 42,
+  "generation_seed": null,
+  "generation_seed_note": "DeepSeek Chat Completions does not expose llama.cpp's generation seed.",
+  "grammar": "Unavailable on the official DeepSeek Chat Completions API.",
+  "datasets": {
+    "hard": {
+      "file": "boolean_full_depth2.json",
+      "sha256": "441e1d4d96a0f6f987e0355a03d4f66869b99dcab5d298b6343cbee6b0356378",
+      "tasks": 80,
+      "proposals_per_cell": 975
+    }
+  },
+  "cells": [
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "baseline",
+      "source": "reused"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "ours_mechanistic",
+      "source": "reused"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "ours_mechanistic_no_feedback",
+      "source": "new"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "ours_semantic",
+      "source": "new"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "ours_semantic_no_feedback",
+      "source": "new"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "ours_none",
+      "source": "new"
+    },
+    {
+      "dataset": "hard",
+      "condition": "prompt",
+      "method": "ours_none_no_feedback",
+      "source": "new"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 850423,
+    "cached_input_tokens": 9344,
+    "output_tokens": 23429,
+    "requests": 4875,
+    "peak_rmb": 1.8699637599999899,
+    "off_peak_rmb": 0.9349818799999949,
+    "unconfirmed_requests": 0,
+    "unconfirmed_peak_reserve_rmb": 0.0
+  },
+  "comparison_easy_dataset": {
+    "file": "boolean_dataset.json",
+    "sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+    "tasks": 56,
+    "proposals_per_cell": 90
+  },
+  "reused_from": "../deepseek_flash_new_prompt_20261126",
+  "scored_proposals": 6825,
+  "new_scored_proposals": 4875,
+  "reused_usage": {
+    "requests": 1950,
+    "prompt_tokens": 360493,
+    "cached_input_tokens": 384,
+    "output_tokens": 9835,
+    "peak_rmb": 0.79891336,
+    "off_peak_rmb": 0.39945668
+  }
+}

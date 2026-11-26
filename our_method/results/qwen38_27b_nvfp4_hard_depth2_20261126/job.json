@@ -1,0 +1,18 @@
+{
+  "pid": 30210,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "run_qwen_smoke.py",
+    "--factorial",
+    "--samples",
+    "80",
+    "--seed",
+    "42",
+    "--dataset",
+    "data/boolean_full_depth2.json",
+    "--output-dir",
+    "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_hard_depth2_20261126/raw"
+  ],
+  "cwd": "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_hard_depth2_20261126/our_method"
+}

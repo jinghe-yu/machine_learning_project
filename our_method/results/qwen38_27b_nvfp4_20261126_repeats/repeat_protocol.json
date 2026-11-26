@@ -1,0 +1,22 @@
+{
+  "status": "prepared",
+  "original_run": "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_20261126_7configs",
+  "new_runs": [
+    "run_02",
+    "run_03"
+  ],
+  "tasks_per_group": 56,
+  "groups_per_run": 7,
+  "calls_per_run": 630,
+  "new_calls_planned": 1260,
+  "task_selection_seed": 42,
+  "decoding_seed": null,
+  "purpose": "two additional independent stochastic runs with original frozen source and unchanged settings",
+  "dataset_sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+  "source_sha256": {
+    "run_qwen_smoke.py": "d78a48d4501de806643cc66c8a10ad15fbbe0ef37b229a02a053556bd5c08247",
+    "boolean_genetics.py": "2a569eda2f555279f4d020db3dc4c65f7894c337ab278686f772c76699d814c4",
+    "benchmark_utils.py": "9547f87630761cc6c84710c20cfbd2b8e6c075dc981e46f3209fdde77155b9e6"
+  },
+  "created_at_utc": "2026-11-26T07:00:53Z"
+}

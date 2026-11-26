@@ -1,0 +1,492 @@
+baseline [1/56] n3_inputs_00_10_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+baseline [2/56] n1_inputs_11_outputs_1: VR=100.0% NR=75.0% RR=75.0% calls=4
+baseline [3/56] n1_inputs_00_outputs_1: VR=0.0% NR=0.0% RR=0.0% calls=2
+baseline [4/56] n3_inputs_01_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [5/56] n2_inputs_00_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+baseline [6/56] n2_inputs_00_10_outputs_11: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [7/56] n2_inputs_00_10_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [8/56] n2_inputs_00_01_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+baseline [9/56] n4_inputs_00_01_10_11_outputs_0101: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [10/56] n1_inputs_11_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=2
+baseline [11/56] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [12/56] n3_inputs_00_01_10_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [13/56] n1_inputs_10_outputs_1: VR=66.7% NR=33.3% RR=33.3% calls=3
+baseline [14/56] n3_inputs_00_01_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+baseline [15/56] n2_inputs_10_11_outputs_01: VR=50.0% NR=100.0% RR=50.0% calls=2
+baseline [16/56] n1_inputs_01_outputs_0: VR=0.0% NR=33.3% RR=0.0% calls=3
+baseline [17/56] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [18/56] n3_inputs_01_10_11_outputs_010: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [19/56] n2_inputs_00_10_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+baseline [20/56] n3_inputs_01_10_11_outputs_111: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [21/56] n3_inputs_00_01_10_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [22/56] n3_inputs_00_01_11_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [23/56] n2_inputs_00_10_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+baseline [24/56] n2_inputs_10_11_outputs_00: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [25/56] n3_inputs_00_01_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=2
+baseline [26/56] n3_inputs_00_01_10_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [27/56] n2_inputs_01_10_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [28/56] n3_inputs_01_10_11_outputs_101: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [29/56] n2_inputs_01_11_outputs_11: VR=50.0% NR=100.0% RR=50.0% calls=2
+baseline [30/56] n1_inputs_00_outputs_0: VR=0.0% NR=25.0% RR=0.0% calls=4
+baseline [31/56] n2_inputs_01_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [32/56] n3_inputs_00_01_11_outputs_100: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [33/56] n2_inputs_01_11_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [34/56] n3_inputs_00_10_11_outputs_100: VR=0.0% NR=100.0% RR=0.0% calls=1
+baseline [35/56] n2_inputs_00_01_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [36/56] n2_inputs_10_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [37/56] n1_inputs_10_outputs_0: VR=66.7% NR=33.3% RR=33.3% calls=3
+baseline [38/56] n3_inputs_01_10_11_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [39/56] n2_inputs_01_10_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [40/56] n1_inputs_01_outputs_1: VR=100.0% NR=66.7% RR=66.7% calls=3
+baseline [41/56] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [42/56] n2_inputs_10_11_outputs_11: VR=100.0% NR=50.0% RR=50.0% calls=2
+baseline [43/56] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [44/56] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+baseline [45/56] n3_inputs_00_01_10_outputs_011: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [46/56] n2_inputs_00_01_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+baseline [47/56] n2_inputs_01_10_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+baseline [48/56] n3_inputs_00_01_10_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [49/56] n4_inputs_00_01_10_11_outputs_1010: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [50/56] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [51/56] n2_inputs_01_10_outputs_10: VR=50.0% NR=50.0% RR=50.0% calls=2
+baseline [52/56] n2_inputs_00_11_outputs_01: VR=100.0% NR=25.0% RR=25.0% calls=4
+baseline [53/56] n2_inputs_00_01_outputs_11: VR=0.0% NR=0.0% RR=0.0% calls=1
+baseline [54/56] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=100.0% RR=100.0% calls=1
+baseline [55/56] n2_inputs_01_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+baseline [56/56] n3_inputs_00_01_10_outputs_000: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [1/56] n3_inputs_00_10_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [2/56] n1_inputs_11_outputs_1: VR=75.0% NR=75.0% RR=75.0% calls=4
+ours_mechanistic [3/56] n1_inputs_00_outputs_1: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_mechanistic [4/56] n3_inputs_01_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [5/56] n2_inputs_00_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_mechanistic [6/56] n2_inputs_00_10_outputs_11: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic [7/56] n2_inputs_00_10_outputs_10: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [8/56] n2_inputs_00_01_outputs_00: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [9/56] n4_inputs_00_01_10_11_outputs_0101: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [10/56] n1_inputs_11_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_mechanistic [11/56] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [12/56] n3_inputs_00_01_10_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [13/56] n1_inputs_10_outputs_1: VR=33.3% NR=100.0% RR=33.3% calls=3
+ours_mechanistic [14/56] n3_inputs_00_01_11_outputs_011: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_mechanistic [15/56] n2_inputs_10_11_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [16/56] n1_inputs_01_outputs_0: VR=66.7% NR=100.0% RR=66.7% calls=3
+ours_mechanistic [17/56] n4_inputs_00_01_10_11_outputs_0111: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [18/56] n3_inputs_01_10_11_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [19/56] n2_inputs_00_10_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [20/56] n3_inputs_01_10_11_outputs_111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [21/56] n3_inputs_00_01_10_outputs_010: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [22/56] n3_inputs_00_01_11_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [23/56] n2_inputs_00_10_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=2
+ours_mechanistic [24/56] n2_inputs_10_11_outputs_00: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [25/56] n3_inputs_00_01_11_outputs_001: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_mechanistic [26/56] n3_inputs_00_01_10_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [27/56] n2_inputs_01_10_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [28/56] n3_inputs_01_10_11_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [29/56] n2_inputs_01_11_outputs_11: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [30/56] n1_inputs_00_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=4
+ours_mechanistic [31/56] n2_inputs_01_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [32/56] n3_inputs_00_01_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [33/56] n2_inputs_01_11_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic [34/56] n3_inputs_00_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [35/56] n2_inputs_00_01_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [36/56] n2_inputs_10_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [37/56] n1_inputs_10_outputs_0: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_mechanistic [38/56] n3_inputs_01_10_11_outputs_011: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic [39/56] n2_inputs_01_10_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [40/56] n1_inputs_01_outputs_1: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_mechanistic [41/56] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [42/56] n2_inputs_10_11_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=2
+ours_mechanistic [43/56] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [44/56] n3_inputs_00_10_11_outputs_011: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [45/56] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [46/56] n2_inputs_00_01_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [47/56] n2_inputs_01_10_outputs_01: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_mechanistic [48/56] n3_inputs_00_01_10_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic [49/56] n4_inputs_00_01_10_11_outputs_1010: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [50/56] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [51/56] n2_inputs_01_10_outputs_10: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_mechanistic [52/56] n2_inputs_00_11_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=4
+ours_mechanistic [53/56] n2_inputs_00_01_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [54/56] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic [55/56] n2_inputs_01_11_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic [56/56] n3_inputs_00_01_10_outputs_000: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [1/56] n3_inputs_00_10_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [2/56] n1_inputs_11_outputs_1: VR=100.0% NR=75.0% RR=75.0% calls=4
+ours_mechanistic_no_feedback [3/56] n1_inputs_00_outputs_1: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_mechanistic_no_feedback [4/56] n3_inputs_01_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [5/56] n2_inputs_00_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_mechanistic_no_feedback [6/56] n2_inputs_00_10_outputs_11: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [7/56] n2_inputs_00_10_outputs_10: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [8/56] n2_inputs_00_01_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_mechanistic_no_feedback [9/56] n4_inputs_00_01_10_11_outputs_0101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [10/56] n1_inputs_11_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_mechanistic_no_feedback [11/56] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [12/56] n3_inputs_00_01_10_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [13/56] n1_inputs_10_outputs_1: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_mechanistic_no_feedback [14/56] n3_inputs_00_01_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [15/56] n2_inputs_10_11_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [16/56] n1_inputs_01_outputs_0: VR=0.0% NR=33.3% RR=0.0% calls=3
+ours_mechanistic_no_feedback [17/56] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [18/56] n3_inputs_01_10_11_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [19/56] n2_inputs_00_10_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [20/56] n3_inputs_01_10_11_outputs_111: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [21/56] n3_inputs_00_01_10_outputs_010: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [22/56] n3_inputs_00_01_11_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [23/56] n2_inputs_00_10_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_mechanistic_no_feedback [24/56] n2_inputs_10_11_outputs_00: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [25/56] n3_inputs_00_01_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [26/56] n3_inputs_00_01_10_outputs_001: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [27/56] n2_inputs_01_10_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [28/56] n3_inputs_01_10_11_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [29/56] n2_inputs_01_11_outputs_11: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [30/56] n1_inputs_00_outputs_0: VR=0.0% NR=25.0% RR=0.0% calls=4
+ours_mechanistic_no_feedback [31/56] n2_inputs_01_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [32/56] n3_inputs_00_01_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [33/56] n2_inputs_01_11_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [34/56] n3_inputs_00_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [35/56] n2_inputs_00_01_outputs_10: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [36/56] n2_inputs_10_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [37/56] n1_inputs_10_outputs_0: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_mechanistic_no_feedback [38/56] n3_inputs_01_10_11_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [39/56] n2_inputs_01_10_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [40/56] n1_inputs_01_outputs_1: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_mechanistic_no_feedback [41/56] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [42/56] n2_inputs_10_11_outputs_11: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [43/56] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [44/56] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [45/56] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [46/56] n2_inputs_00_01_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [47/56] n2_inputs_01_10_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [48/56] n3_inputs_00_01_10_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [49/56] n4_inputs_00_01_10_11_outputs_1010: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_mechanistic_no_feedback [50/56] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [51/56] n2_inputs_01_10_outputs_10: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [52/56] n2_inputs_00_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=4
+ours_mechanistic_no_feedback [53/56] n2_inputs_00_01_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [54/56] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_mechanistic_no_feedback [55/56] n2_inputs_01_11_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_mechanistic_no_feedback [56/56] n3_inputs_00_01_10_outputs_000: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [1/56] n3_inputs_00_10_11_outputs_001: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic [2/56] n1_inputs_11_outputs_1: VR=100.0% NR=100.0% RR=100.0% calls=4
+ours_semantic [3/56] n1_inputs_00_outputs_1: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic [4/56] n3_inputs_01_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [5/56] n2_inputs_00_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic [6/56] n2_inputs_00_10_outputs_11: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [7/56] n2_inputs_00_10_outputs_10: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [8/56] n2_inputs_00_01_outputs_00: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic [9/56] n4_inputs_00_01_10_11_outputs_0101: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic [10/56] n1_inputs_11_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic [11/56] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [12/56] n3_inputs_00_01_10_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [13/56] n1_inputs_10_outputs_1: VR=33.3% NR=33.3% RR=33.3% calls=3
+ours_semantic [14/56] n3_inputs_00_01_11_outputs_011: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_semantic [15/56] n2_inputs_10_11_outputs_01: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic [16/56] n1_inputs_01_outputs_0: VR=33.3% NR=33.3% RR=33.3% calls=3
+ours_semantic [17/56] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [18/56] n3_inputs_01_10_11_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [19/56] n2_inputs_00_10_outputs_01: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic [20/56] n3_inputs_01_10_11_outputs_111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [21/56] n3_inputs_00_01_10_outputs_010: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [22/56] n3_inputs_00_01_11_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [23/56] n2_inputs_00_10_outputs_00: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_semantic [24/56] n2_inputs_10_11_outputs_00: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [25/56] n3_inputs_00_01_11_outputs_001: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic [26/56] n3_inputs_00_01_10_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [27/56] n2_inputs_01_10_outputs_00: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [28/56] n3_inputs_01_10_11_outputs_101: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [29/56] n2_inputs_01_11_outputs_11: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_semantic [30/56] n1_inputs_00_outputs_0: VR=25.0% NR=25.0% RR=25.0% calls=4
+ours_semantic [31/56] n2_inputs_01_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [32/56] n3_inputs_00_01_11_outputs_100: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic [33/56] n2_inputs_01_11_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic [34/56] n3_inputs_00_10_11_outputs_100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [35/56] n2_inputs_00_01_outputs_10: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic [36/56] n2_inputs_10_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [37/56] n1_inputs_10_outputs_0: VR=33.3% NR=66.7% RR=33.3% calls=3
+ours_semantic [38/56] n3_inputs_01_10_11_outputs_011: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic [39/56] n2_inputs_01_10_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [40/56] n1_inputs_01_outputs_1: VR=33.3% NR=33.3% RR=33.3% calls=3
+ours_semantic [41/56] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [42/56] n2_inputs_10_11_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=2
+ours_semantic [43/56] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [44/56] n3_inputs_00_10_11_outputs_011: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_semantic [45/56] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [46/56] n2_inputs_00_01_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_semantic [47/56] n2_inputs_01_10_outputs_01: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic [48/56] n3_inputs_00_01_10_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [49/56] n4_inputs_00_01_10_11_outputs_1010: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic [50/56] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [51/56] n2_inputs_01_10_outputs_10: VR=100.0% NR=100.0% RR=100.0% calls=2
+ours_semantic [52/56] n2_inputs_00_11_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=4
+ours_semantic [53/56] n2_inputs_00_01_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [54/56] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic [55/56] n2_inputs_01_11_outputs_01: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic [56/56] n3_inputs_00_01_10_outputs_000: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [1/56] n3_inputs_00_10_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [2/56] n1_inputs_11_outputs_1: VR=75.0% NR=50.0% RR=50.0% calls=4
+ours_semantic_no_feedback [3/56] n1_inputs_00_outputs_1: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic_no_feedback [4/56] n3_inputs_01_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [5/56] n2_inputs_00_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic_no_feedback [6/56] n2_inputs_00_10_outputs_11: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic_no_feedback [7/56] n2_inputs_00_10_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [8/56] n2_inputs_00_01_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_semantic_no_feedback [9/56] n4_inputs_00_01_10_11_outputs_0101: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [10/56] n1_inputs_11_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic_no_feedback [11/56] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [12/56] n3_inputs_00_01_10_outputs_101: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [13/56] n1_inputs_10_outputs_1: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_semantic_no_feedback [14/56] n3_inputs_00_01_11_outputs_011: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_semantic_no_feedback [15/56] n2_inputs_10_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [16/56] n1_inputs_01_outputs_0: VR=0.0% NR=33.3% RR=0.0% calls=3
+ours_semantic_no_feedback [17/56] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [18/56] n3_inputs_01_10_11_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [19/56] n2_inputs_00_10_outputs_01: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic_no_feedback [20/56] n3_inputs_01_10_11_outputs_111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [21/56] n3_inputs_00_01_10_outputs_010: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic_no_feedback [22/56] n3_inputs_00_01_11_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [23/56] n2_inputs_00_10_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic_no_feedback [24/56] n2_inputs_10_11_outputs_00: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [25/56] n3_inputs_00_01_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [26/56] n3_inputs_00_01_10_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [27/56] n2_inputs_01_10_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [28/56] n3_inputs_01_10_11_outputs_101: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic_no_feedback [29/56] n2_inputs_01_11_outputs_11: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [30/56] n1_inputs_00_outputs_0: VR=25.0% NR=50.0% RR=25.0% calls=4
+ours_semantic_no_feedback [31/56] n2_inputs_01_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [32/56] n3_inputs_00_01_11_outputs_100: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic_no_feedback [33/56] n2_inputs_01_11_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_semantic_no_feedback [34/56] n3_inputs_00_10_11_outputs_100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [35/56] n2_inputs_00_01_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [36/56] n2_inputs_10_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [37/56] n1_inputs_10_outputs_0: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_semantic_no_feedback [38/56] n3_inputs_01_10_11_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [39/56] n2_inputs_01_10_outputs_11: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [40/56] n1_inputs_01_outputs_1: VR=100.0% NR=66.7% RR=66.7% calls=3
+ours_semantic_no_feedback [41/56] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [42/56] n2_inputs_10_11_outputs_11: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [43/56] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [44/56] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [45/56] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [46/56] n2_inputs_00_01_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [47/56] n2_inputs_01_10_outputs_01: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic_no_feedback [48/56] n3_inputs_00_01_10_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [49/56] n4_inputs_00_01_10_11_outputs_1010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_semantic_no_feedback [50/56] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [51/56] n2_inputs_01_10_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_semantic_no_feedback [52/56] n2_inputs_00_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=4
+ours_semantic_no_feedback [53/56] n2_inputs_00_01_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [54/56] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_semantic_no_feedback [55/56] n2_inputs_01_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_semantic_no_feedback [56/56] n3_inputs_00_01_10_outputs_000: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [1/56] n3_inputs_00_10_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [2/56] n1_inputs_11_outputs_1: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_none [3/56] n1_inputs_00_outputs_1: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_none [4/56] n3_inputs_01_10_11_outputs_100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [5/56] n2_inputs_00_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_none [6/56] n2_inputs_00_10_outputs_11: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [7/56] n2_inputs_00_10_outputs_10: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [8/56] n2_inputs_00_01_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_none [9/56] n4_inputs_00_01_10_11_outputs_0101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [10/56] n1_inputs_11_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_none [11/56] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [12/56] n3_inputs_00_01_10_outputs_101: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [13/56] n1_inputs_10_outputs_1: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none [14/56] n3_inputs_00_01_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [15/56] n2_inputs_10_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [16/56] n1_inputs_01_outputs_0: VR=0.0% NR=33.3% RR=0.0% calls=3
+ours_none [17/56] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [18/56] n3_inputs_01_10_11_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [19/56] n2_inputs_00_10_outputs_01: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_none [20/56] n3_inputs_01_10_11_outputs_111: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [21/56] n3_inputs_00_01_10_outputs_010: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [22/56] n3_inputs_00_01_11_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [23/56] n2_inputs_00_10_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=2
+ours_none [24/56] n2_inputs_10_11_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [25/56] n3_inputs_00_01_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [26/56] n3_inputs_00_01_10_outputs_001: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [27/56] n2_inputs_01_10_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [28/56] n3_inputs_01_10_11_outputs_101: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [29/56] n2_inputs_01_11_outputs_11: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [30/56] n1_inputs_00_outputs_0: VR=75.0% NR=25.0% RR=25.0% calls=4
+ours_none [31/56] n2_inputs_01_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [32/56] n3_inputs_00_01_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [33/56] n2_inputs_01_11_outputs_00: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_none [34/56] n3_inputs_00_10_11_outputs_100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [35/56] n2_inputs_00_01_outputs_10: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [36/56] n2_inputs_10_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [37/56] n1_inputs_10_outputs_0: VR=100.0% NR=33.3% RR=33.3% calls=3
+ours_none [38/56] n3_inputs_01_10_11_outputs_011: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [39/56] n2_inputs_01_10_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [40/56] n1_inputs_01_outputs_1: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_none [41/56] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [42/56] n2_inputs_10_11_outputs_11: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [43/56] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [44/56] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [45/56] n3_inputs_00_01_10_outputs_011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [46/56] n2_inputs_00_01_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [47/56] n2_inputs_01_10_outputs_01: VR=100.0% NR=100.0% RR=100.0% calls=2
+ours_none [48/56] n3_inputs_00_01_10_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none [49/56] n4_inputs_00_01_10_11_outputs_1010: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [50/56] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [51/56] n2_inputs_01_10_outputs_10: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [52/56] n2_inputs_00_11_outputs_01: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_none [53/56] n2_inputs_00_01_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [54/56] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none [55/56] n2_inputs_01_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none [56/56] n3_inputs_00_01_10_outputs_000: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_none_no_feedback [1/56] n3_inputs_00_10_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [2/56] n1_inputs_11_outputs_1: VR=75.0% NR=50.0% RR=50.0% calls=4
+ours_none_no_feedback [3/56] n1_inputs_00_outputs_1: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_none_no_feedback [4/56] n3_inputs_01_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [5/56] n2_inputs_00_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_none_no_feedback [6/56] n2_inputs_00_10_outputs_11: VR=0.0% NR=100.0% RR=0.0% calls=1
+ours_none_no_feedback [7/56] n2_inputs_00_10_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [8/56] n2_inputs_00_01_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_none_no_feedback [9/56] n4_inputs_00_01_10_11_outputs_0101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [10/56] n1_inputs_11_outputs_0: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_none_no_feedback [11/56] n3_inputs_00_10_11_outputs_110: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [12/56] n3_inputs_00_01_10_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [13/56] n1_inputs_10_outputs_1: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_none_no_feedback [14/56] n3_inputs_00_01_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [15/56] n2_inputs_10_11_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [16/56] n1_inputs_01_outputs_0: VR=0.0% NR=33.3% RR=0.0% calls=3
+ours_none_no_feedback [17/56] n4_inputs_00_01_10_11_outputs_0111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [18/56] n3_inputs_01_10_11_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [19/56] n2_inputs_00_10_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [20/56] n3_inputs_01_10_11_outputs_111: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [21/56] n3_inputs_00_01_10_outputs_010: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [22/56] n3_inputs_00_01_11_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [23/56] n2_inputs_00_10_outputs_00: VR=0.0% NR=50.0% RR=0.0% calls=2
+ours_none_no_feedback [24/56] n2_inputs_10_11_outputs_00: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [25/56] n3_inputs_00_01_11_outputs_001: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [26/56] n3_inputs_00_01_10_outputs_001: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [27/56] n2_inputs_01_10_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [28/56] n3_inputs_01_10_11_outputs_101: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [29/56] n2_inputs_01_11_outputs_11: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [30/56] n1_inputs_00_outputs_0: VR=0.0% NR=25.0% RR=0.0% calls=4
+ours_none_no_feedback [31/56] n2_inputs_01_11_outputs_10: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [32/56] n3_inputs_00_01_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [33/56] n2_inputs_01_11_outputs_00: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [34/56] n3_inputs_00_10_11_outputs_100: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [35/56] n2_inputs_00_01_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [36/56] n2_inputs_10_11_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [37/56] n1_inputs_10_outputs_0: VR=66.7% NR=33.3% RR=33.3% calls=3
+ours_none_no_feedback [38/56] n3_inputs_01_10_11_outputs_011: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [39/56] n2_inputs_01_10_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [40/56] n1_inputs_01_outputs_1: VR=100.0% NR=66.7% RR=66.7% calls=3
+ours_none_no_feedback [41/56] n4_inputs_00_01_10_11_outputs_1100: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [42/56] n2_inputs_10_11_outputs_11: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [43/56] n3_inputs_01_10_11_outputs_001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [44/56] n3_inputs_00_10_11_outputs_011: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [45/56] n3_inputs_00_01_10_outputs_011: VR=0.0% NR=0.0% RR=0.0% calls=1
+ours_none_no_feedback [46/56] n2_inputs_00_01_outputs_01: VR=50.0% NR=100.0% RR=50.0% calls=2
+ours_none_no_feedback [47/56] n2_inputs_01_10_outputs_01: VR=100.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [48/56] n3_inputs_00_01_10_outputs_110: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [49/56] n4_inputs_00_01_10_11_outputs_1010: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [50/56] n4_inputs_00_01_10_11_outputs_0011: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [51/56] n2_inputs_01_10_outputs_10: VR=0.0% NR=0.0% RR=0.0% calls=2
+ours_none_no_feedback [52/56] n2_inputs_00_11_outputs_01: VR=100.0% NR=25.0% RR=25.0% calls=4
+ours_none_no_feedback [53/56] n2_inputs_00_01_outputs_11: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [54/56] n4_inputs_00_01_10_11_outputs_0001: VR=100.0% NR=100.0% RR=100.0% calls=1
+ours_none_no_feedback [55/56] n2_inputs_01_11_outputs_01: VR=50.0% NR=50.0% RR=50.0% calls=2
+ours_none_no_feedback [56/56] n3_inputs_00_01_10_outputs_000: VR=0.0% NR=0.0% RR=0.0% calls=1
+{
+  "baseline": {
+    "validity_rate": 0.5059523809523809,
+    "novelty_rate": 0.5610119047619048,
+    "recovery_rate": 0.40773809523809523,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 13626,
+      "completion_tokens": 862,
+      "total_tokens": 14488
+    },
+    "api_elapsed_seconds": 172.74819625495002
+  },
+  "ours_mechanistic": {
+    "validity_rate": 0.46279761904761907,
+    "novelty_rate": 0.5907738095238095,
+    "recovery_rate": 0.4538690476190476,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 17883,
+      "completion_tokens": 453,
+      "total_tokens": 18336
+    },
+    "api_elapsed_seconds": 130.9464558083564
+  },
+  "ours_mechanistic_no_feedback": {
+    "validity_rate": 0.5625,
+    "novelty_rate": 0.5327380952380952,
+    "recovery_rate": 0.4330357142857143,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 16776,
+      "completion_tokens": 362,
+      "total_tokens": 17138
+    },
+    "api_elapsed_seconds": 106.03664928488433
+  },
+  "ours_semantic": {
+    "validity_rate": 0.5372023809523809,
+    "novelty_rate": 0.6949404761904762,
+    "recovery_rate": 0.5372023809523809,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 15089,
+      "completion_tokens": 439,
+      "total_tokens": 15528
+    },
+    "api_elapsed_seconds": 114.14606464467943
+  },
+  "ours_semantic_no_feedback": {
+    "validity_rate": 0.4732142857142857,
+    "novelty_rate": 0.49404761904761907,
+    "recovery_rate": 0.37648809523809523,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 13986,
+      "completion_tokens": 390,
+      "total_tokens": 14376
+    },
+    "api_elapsed_seconds": 114.8852900522761
+  },
+  "ours_none": {
+    "validity_rate": 0.5788690476190476,
+    "novelty_rate": 0.5014880952380952,
+    "recovery_rate": 0.42410714285714285,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 14689,
+      "completion_tokens": 431,
+      "total_tokens": 15120
+    },
+    "api_elapsed_seconds": 112.8615035652183
+  },
+  "ours_none_no_feedback": {
+    "validity_rate": 0.5372023809523809,
+    "novelty_rate": 0.4761904761904762,
+    "recovery_rate": 0.4211309523809524,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 13626,
+      "completion_tokens": 639,
+      "total_tokens": 14265
+    },
+    "api_elapsed_seconds": 133.81996181048453
+  }
+}

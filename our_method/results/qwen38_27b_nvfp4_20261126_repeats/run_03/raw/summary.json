@@ -1,0 +1,100 @@
+{
+  "baseline": {
+    "validity_rate": 0.5059523809523809,
+    "novelty_rate": 0.5610119047619048,
+    "recovery_rate": 0.40773809523809523,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 13626,
+      "completion_tokens": 862,
+      "total_tokens": 14488
+    },
+    "api_elapsed_seconds": 172.74819625495002
+  },
+  "ours_mechanistic": {
+    "validity_rate": 0.46279761904761907,
+    "novelty_rate": 0.5907738095238095,
+    "recovery_rate": 0.4538690476190476,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 17883,
+      "completion_tokens": 453,
+      "total_tokens": 18336
+    },
+    "api_elapsed_seconds": 130.9464558083564
+  },
+  "ours_mechanistic_no_feedback": {
+    "validity_rate": 0.5625,
+    "novelty_rate": 0.5327380952380952,
+    "recovery_rate": 0.4330357142857143,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 16776,
+      "completion_tokens": 362,
+      "total_tokens": 17138
+    },
+    "api_elapsed_seconds": 106.03664928488433
+  },
+  "ours_semantic": {
+    "validity_rate": 0.5372023809523809,
+    "novelty_rate": 0.6949404761904762,
+    "recovery_rate": 0.5372023809523809,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 15089,
+      "completion_tokens": 439,
+      "total_tokens": 15528
+    },
+    "api_elapsed_seconds": 114.14606464467943
+  },
+  "ours_semantic_no_feedback": {
+    "validity_rate": 0.4732142857142857,
+    "novelty_rate": 0.49404761904761907,
+    "recovery_rate": 0.37648809523809523,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 13986,
+      "completion_tokens": 390,
+      "total_tokens": 14376
+    },
+    "api_elapsed_seconds": 114.8852900522761
+  },
+  "ours_none": {
+    "validity_rate": 0.5788690476190476,
+    "novelty_rate": 0.5014880952380952,
+    "recovery_rate": 0.42410714285714285,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 14689,
+      "completion_tokens": 431,
+      "total_tokens": 15120
+    },
+    "api_elapsed_seconds": 112.8615035652183
+  },
+  "ours_none_no_feedback": {
+    "validity_rate": 0.5372023809523809,
+    "novelty_rate": 0.4761904761904762,
+    "recovery_rate": 0.4211309523809524,
+    "attempts": 1.6071428571428572,
+    "tasks": 56,
+    "calls": 90,
+    "usage": {
+      "prompt_tokens": 13626,
+      "completion_tokens": 639,
+      "total_tokens": 14265
+    },
+    "api_elapsed_seconds": 133.81996181048453
+  }
+}
