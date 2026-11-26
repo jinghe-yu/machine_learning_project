@@ -1,0 +1,7 @@
+{"method": "baseline", "started": "2026-11-26T18:50:29.755732+08:00", "elapsed_seconds": 158.03099062500002, "exit_code": 0, "cache_ram_mib": 0, "slot_affinity": true}
+{"method": "ours_mechanistic", "started": "2026-11-26T18:53:07.788559+08:00", "elapsed_seconds": 284.762067583, "exit_code": 0, "cache_ram_mib": 0, "slot_affinity": true}
+{"method": "ours_mechanistic_no_feedback", "started": "2026-11-26T18:57:52.553201+08:00", "elapsed_seconds": 149.22537262500003, "exit_code": 0, "cache_ram_mib": 0, "slot_affinity": true}
+{"method": "ours_semantic", "started": "2026-11-26T19:00:21.780048+08:00", "elapsed_seconds": 273.171533791, "exit_code": 0, "cache_ram_mib": 0, "slot_affinity": true}
+{"method": "ours_semantic_no_feedback", "started": "2026-11-26T19:04:54.953423+08:00", "elapsed_seconds": 150.09563724999998, "exit_code": 0, "cache_ram_mib": 0, "slot_affinity": true}
+{"method": "ours_none", "started": "2026-11-26T19:07:25.050767+08:00", "elapsed_seconds": 268.986968584, "exit_code": 0, "cache_ram_mib": 0, "slot_affinity": true}
+{"method": "ours_none_no_feedback", "started": "2026-11-26T19:11:54.305992+08:00", "elapsed_seconds": 148.2867409590001, "exit_code": 0, "cache_ram_mib": 0, "slot_affinity": true}

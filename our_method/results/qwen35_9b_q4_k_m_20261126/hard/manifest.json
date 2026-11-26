@@ -1,0 +1,33 @@
+{
+  "git_commit": "cc6940c1c501185de844a6c48217f1f2f82f11a4",
+  "source_sha256": {
+    "boolean_genetics.py": "2a569eda2f555279f4d020db3dc4c65f7894c337ab278686f772c76699d814c4",
+    "benchmark_utils.py": "9547f87630761cc6c84710c20cfbd2b8e6c075dc981e46f3209fdde77155b9e6"
+  },
+  "dataset": "data/boolean_full_depth2.json",
+  "dataset_sha256": "441e1d4d96a0f6f987e0355a03d4f66869b99dcab5d298b6343cbee6b0356378",
+  "model_id": "qwen3.5-9b-q4_k_m",
+  "weights_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+  "server": "http://127.0.0.1:18085/v1",
+  "runtime": "llama.cpp b12359, Metal compatibility patch from PR #29814",
+  "thinking": "off",
+  "context_pool": 24576,
+  "context_limit_per_slot": 4096,
+  "parallel": 16,
+  "task_seed": 42,
+  "generation_seed": "42 + method_index*100000 + task_index*128 + attempt_index; zero-based",
+  "temperature": 0.7,
+  "max_tokens": 128,
+  "tasks_per_method": 80,
+  "proposals_per_method": 975,
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ],
+  "context_size_per_slot": 1536
+}
