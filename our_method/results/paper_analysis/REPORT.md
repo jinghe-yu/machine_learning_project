@@ -96,11 +96,51 @@ GBNF 将四组超深候选从合计 136／360 降到 0／360，四组 RR 同时�
 
 **图 4 英文图注**  Recovery and depth violations under three constraint regimes on 56 depth-1 tasks. (a) Macro mechanistic RR. (b) Fraction of all calls yielding a parseable but over-depth expression. Each measured condition used 90 calls. Grammar-constrained decoding was measured on the two local Qwen3.5 models. [矢量 PDF](figures/fig4_depth_constraints.pdf)
 
-## 6. 图表复核与复现
+## 6. Qwen3.8-27B 专项分析
 
-原目录的 14 张图涵盖逐模型 VR／NR／RR、部分跨模型对比，以及复杂解和深度条件对照。原有跨模型图的提示版本和收录模型不同，部分图采用单次 27B 结果。四张新图使用逐题 CSV 重算，图 1 在两套题上使用同一色阶，图 2 标出同题配对区间，图 3 展示独立对照的波动，图 4 使用实际记录的语法条件。图内文字为英文，提供可编辑文字和路径的矢量 PDF 以及 600 dpi PNG。
+实验在 RTX 5090 上使用 vLLM 和 NVFP4 权重。温度为 0.7，输出上限为 256 tokens，任务抽样种子为 42，解码独立采样。普通题有三次完整七组运行，共 1,890 次调用，困难题有一次完整七组运行，共 6,825 次调用。下表以独立基线和「无去重 − 反馈」作双对照，两者使用相同的生成规则并独立采样。 [普通题首轮配置](../qwen38_27b_nvfp4_20261126/manifest.json) · [重复实验记录](../qwen38_27b_nvfp4_20261126_repeats/REPORT.md) · [困难题配置](../qwen38_27b_nvfp4_hard_depth2_20261126/manifest.json)
 
-`summary_metrics.csv` 的率以 0–1 表示，`paired_effects.csv` 的差值和区间以百分点表示。CSV 保留 27B 的逐次记录，可按同一配置对三次普通题结果求均值。`earlier_deepseek_runs.csv` 保留早期 JSON 的各轮统计。脚本从已保存的逐题分子、分母和原始历史得分复算，无需推理服务。运行环境需要 Python、NumPy、Matplotlib 和仓库提交 `ace7fbe`。 [逐组与分层指标](summary_metrics.csv) · [配对差值](paired_effects.csv) · [历史结果](earlier_deepseek_runs.csv) · [复算脚本](reproduce.py)
+### 普通题三次重复
+
+逐次 RR 和平均 RR 以百分数表示，样本标准差与差值以百分点表示。
+
+| 配置 | 第 1 次 | 第 2 次 | 第 3 次 | 平均 RR | 样本标准差 | Δ 基线 | Δ 无去重 − 反馈 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 独立基线 | 36.76 | 45.83 | 40.77 | 41.12 | 4.55 | 0.00 | −3.67 |
+| 机制＋反馈 | 40.62 | 49.40 | 45.39 | 45.14 | 4.40 | +4.02 | +0.35 |
+| 机制 − 反馈 | 43.90 | 38.84 | 43.30 | 42.01 | 2.77 | +0.89 | −2.78 |
+| 语义＋反馈 | 50.60 | 46.73 | 53.72 | **50.35** | 3.50 | +9.23 | +5.56 |
+| 语义 − 反馈 | 41.52 | 44.49 | 37.65 | 41.22 | 3.43 | +0.10 | −3.57 |
+| 无去重＋反馈 | 45.54 | 43.01 | 42.41 | 43.65 | 1.66 | +2.53 | −1.14 |
+| 无去重 − 反馈 | 44.35 | 47.92 | 42.11 | 44.79 | 2.93 | +3.67 | 0.00 |
+
+语义去重加反馈的三次平均 RR 最高，并在第 1、3 次取得最高分。它相对「无去重 − 反馈」的逐次差值为 +6.25、−1.19、+11.61 个百分点，平均 +5.56，样本标准差为 6.43 个百分点。同一去重规则内，开启反馈的平均增益为 +9.13 个百分点，在 24 道多真值题上为 +12.96 个百分点。 [逐次结果](../qwen38_27b_nvfp4_20261126_repeats/per_run_summary.csv) · [逐题配对](paired_effects.csv)
+
+### 困难题的覆盖与开销
+
+| 配置 | 整体 RR | Δ 基线（百分点） | Δ 无去重 − 反馈（百分点） | 简单 RR | 复杂 RR | 复杂真值恢复数 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 独立基线 | 14.26% | 0.00 | +0.48 | 21.40% | 0.44% | 1／300 |
+| 机制＋反馈 | 17.38% | +3.12 | +3.60 | 25.82% | 0.00% | 0／300 |
+| 机制 − 反馈 | 14.37% | +0.11 | +0.59 | 21.78% | 0.00% | 0／300 |
+| 语义＋反馈 | **19.15%** | +4.89 | +5.37 | 28.82% | 0.00% | 0／300 |
+| 语义 − 反馈 | 15.78% | +1.52 | +2.00 | 23.31% | 0.00% | 0／300 |
+| 无去重＋反馈 | 10.88% | −3.38 | −2.90 | 15.95% | 1.32% | 1／300 |
+| 无去重 − 反馈 | 13.78% | −0.48 | 0.00 | 21.01% | 0.66% | 1／300 |
+
+语义去重加反馈相对「无去重 − 反馈」的配对差为 +5.37 个百分点，95% 题目重采样区间为 [+2.83, +7.85]，36 题提高、35 题持平、9 题下降。增益来自简单机制，恢复数从 107／675 升至 172／675，复杂真值从 1／300 降至 0／300。困难题只有一次运行，该区间描述题目间波动。三组各恢复了一个复杂真值，其复杂宏观 RR 仍有差异，因为逐题分母不同。 [27B 汇总数据](qwen38_27b_summary.csv)
+
+在相同的 975 次调用下，基线、机制去重加反馈和语义去重加反馈分别使用 159,315、224,241 和 192,838 个输入 tokens，输出用量分别为 5,474、5,857 和 6,158 个 tokens。语义去重加反馈比基线多用约 21.0% 的输入 tokens，比机制去重加反馈少用约 14.0%。四次运行的 8,715 次调用中有 20 次达到长度上限，按原评分保留。 [27B 汇总数据](qwen38_27b_summary.csv)
+
+![图 5。Qwen3.8-27B 七组实验的普通题重复结果和困难题复杂度分层](figures/fig5_qwen38_27b.png)
+
+**图 5 英文图注**  Qwen3.8-27B results for seven configurations. (a) Macro mechanistic recovery rate (RR) in three depth-1 runs. Vertical ticks mark the three-run means. (b) Overall and simple-mechanism macro RR in one depth-2 run. (c) Recovered complex targets out of 300 task–mechanism pairs and macro RR over the 76 tasks with complex targets. FB denotes feedback. [矢量 PDF](figures/fig5_qwen38_27b.pdf)
+
+## 7. 图表复核与复现
+
+原目录的 14 张图涵盖逐模型 VR／NR／RR、部分跨模型对比，以及复杂解和深度条件对照。原有跨模型图的提示版本和收录模型不同，部分图采用单次 27B 结果。综合分析的五张图使用逐题 CSV 重算，图 1 在两套题上使用同一色阶，图 2 标出同题配对区间，图 3 展示独立对照的波动，图 4 使用实际记录的语法条件，图 5 对照 27B 七组的重复结果和复杂度分层。图内文字为英文，提供可编辑文字和路径的矢量 PDF 以及 600 dpi PNG。
+
+`summary_metrics.csv` 的率以 0–1 表示，`paired_effects.csv` 的差值和区间以百分点表示。`qwen38_27b_summary.csv` 的 `_pct` 列以百分数表示，`_pp` 列以百分点表示，调用量、token 用量及真值恢复数按同题集、同配置跨运行合计。空白表示该实验没有对应运行或指标。`earlier_deepseek_runs.csv` 保留早期 JSON 的各轮统计。脚本从逐题 CSV、27B 请求日志和历史 JSON 复算，无需推理服务。运行环境需要 Python、NumPy、Matplotlib 和仓库提交 `ace7fbe`。 [逐组与分层指标](summary_metrics.csv) · [配对差值](paired_effects.csv) · [27B 专项数据](qwen38_27b_summary.csv) · [历史结果](earlier_deepseek_runs.csv) · [复算脚本](reproduce.py)
 
 在仓库根目录运行以下命令。
 

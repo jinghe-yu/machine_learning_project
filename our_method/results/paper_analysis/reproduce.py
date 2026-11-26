@@ -26,6 +26,10 @@ DIRS = dict(zip(MODELS, (
     "ministral3_8b_instruct_2512_q4_k_m_20261126", "qwen38_27b_nvfp4_20261126",
     "deepseek_flash_new_prompt_20261126",
 )))
+Q27_RAW = {
+    "easy": (f"{DIRS[Q27]}/raw", f"{DIRS[Q27]}_repeats/run_02/raw", f"{DIRS[Q27]}_repeats/run_03/raw"),
+    "hard": ("qwen38_27b_nvfp4_hard_depth2_20261126/raw",),
+}
 B, M, M0, S, S0, N, N0 = METHODS = (
     "baseline", "ours_mechanistic", "ours_mechanistic_no_feedback", "ours_semantic",
     "ours_semantic_no_feedback", "ours_none", "ours_none_no_feedback",
@@ -143,7 +147,7 @@ def load_runs():
         easy = DIRS[model] + ("/easy/raw" if model == DEEPSEEK else "/raw")
         hard = {
             DEEPSEEK: "deepseek_flash_hard_seven_20261126/raw",
-            Q27: "qwen38_27b_nvfp4_hard_depth2_20261126/raw",
+            Q27: Q27_RAW["hard"][0],
         }.get(model, f"{DIRS[model]}/hard/raw")
         for dataset, folder in (("easy", easy), ("hard", hard)):
             for method in METHODS:
@@ -152,9 +156,9 @@ def load_runs():
                 revision = ARCHIVE if model == MINISTRAL and dataset == "easy" else None
                 runs["main", dataset, model, "1", method, "prompt"] = load_group(path, dataset, revision)
     for method in METHODS:
-        for run in ("02", "03"):
-            path = RESULTS / f"{DIRS[Q27]}_repeats/run_{run}/raw/{method}.csv"
-            runs["main", "easy", Q27, str(int(run)), method, "prompt"] = load_group(path, "easy")
+        for run, folder in enumerate(Q27_RAW["easy"][1:], start=2):
+            path = RESULTS / folder / f"{method}.csv"
+            runs["main", "easy", Q27, str(run), method, "prompt"] = load_group(path, "easy")
         path = RESULTS / f"deepseek_flash_20261126/raw/{method}.csv"
         runs["earlier_prompt", "easy", DEEPSEEK, "1", method, "prompt"] = load_group(path, "easy")
     for method in (B, M):
@@ -238,6 +242,57 @@ def main_metrics(runs, dataset, model, method, stratum="all"):
     by_run = [metrics(subset(select(runs, dataset, model, method, run), stratum)) for run in repeats]
     return {key: np.mean([m[key] for m in by_run]) if by_run[0][key] is not None else None
             for key in by_run[0]}
+
+
+def q27_summary(runs):
+    summary = {}
+    for dataset, folders in Q27_RAW.items():
+        run_ids = tuple(str(i) for i in range(1, len(folders) + 1))
+        usage = {method: dict(calls=0, prompt_tokens=0, completion_tokens=0, length_limited_calls=0)
+                 for method in METHODS}
+        for folder in folders:
+            with (RESULTS / folder / "requests.jsonl").open(encoding="utf-8") as file:
+                for line in file:
+                    request = json.loads(line)
+                    response = request["response"]
+                    totals = usage[request["method"]]
+                    assert response["model"] == Q27.lower(), folder
+                    totals["calls"] += 1
+                    for field in ("prompt_tokens", "completion_tokens"):
+                        totals[field] += response["usage"][field]
+                    totals["length_limited_calls"] += response["choices"][0]["finish_reason"] == "length"
+
+        for method in METHODS:
+            by_run = [select(runs, dataset, Q27, method, run) for run in run_ids]
+            scores = [metrics(rows) for rows in by_run]
+            totals = usage[method]
+            assert totals["calls"] == sum(score["proposals"] for score in scores), (dataset, method)
+            rr = np.array([100 * score["rr"] for score in scores])
+            row = dict(model=Q27, dataset=dataset, method=method, runs=len(scores),
+                       tasks_per_run=scores[0]["tasks"], **totals,
+                       rr_run_1_pct=rr[0], rr_run_2_pct=rr[1] if len(rr) > 1 else None,
+                       rr_run_3_pct=rr[2] if len(rr) > 2 else None,
+                       rr_sample_sd_pp=np.std(rr, ddof=1) if len(rr) > 1 else None)
+            for field in RATE_FIELDS:
+                row[f"{field}_mean_pct"] = (100 * np.mean([score[field] for score in scores])
+                                             if scores[0][field] is not None else None)
+            for prefix in ("simple", "complex"):
+                row[f"{prefix}_targets_recovered"] = sum(score[f"n_recovered_{prefix}"] for score in scores)
+                row[f"{prefix}_targets_total"] = sum(r[f"n_{prefix}_ground_truth"] for rows in by_run
+                                                     for r in rows.values())
+            for reference, label in ((B, "baseline"), (N0, "no_dedup_no_feedback")):
+                control = [select(runs, dataset, Q27, reference, run) for run in run_ids]
+                deltas = rr - np.array([100 * metrics(rows)["rr"] for rows in control])
+                row[f"delta_vs_{label}_pp"] = deltas.mean()
+                if len(rr) > 1:
+                    row[f"delta_vs_{label}_sample_sd_pp"] = np.std(deltas, ddof=1)
+                else:
+                    effect = paired(by_run[0], control[0])
+                    for field in ("lower_95_pp", "upper_95_pp", "wins", "ties", "losses"):
+                        row[f"vs_{label}_{field}"] = effect[field]
+            summary[dataset, method] = row
+    write_csv("qwen38_27b_summary.csv", list(summary.values()))
+    return summary
 
 
 def format_axes(ax, letter, title):
@@ -388,10 +443,55 @@ def figure_depth(runs):
     save(fig, "fig4_depth_constraints")
 
 
+def figure_q27(summary):
+    fig, (ax, bx, cx) = plt.subplots(1, 3, figsize=(7.2, 3.4),
+                                     gridspec_kw={"width_ratios": [1.35, 1.08, .76]})
+    fig.subplots_adjust(left=.168, right=.978, bottom=.25, top=.84, wspace=.20)
+    fig.suptitle(Q27, x=.168, y=.975, ha="left", fontsize=10, fontweight="bold")
+    ys = np.arange(len(METHODS))
+    labels = ("Baseline", "Mech. + FB", "Mech. − FB", "Semantic + FB", "Semantic − FB", "No dedup + FB", "No dedup − FB")
+    easy = [summary["easy", m] for m in METHODS]
+    hard = [summary["hard", m] for m in METHODS]
+    for panel, letter, title in zip((ax, bx, cx), "abc",
+                                    ("Depth 1 (56 tasks)", "Depth 2 (80 tasks)", "Complex RR")):
+        format_axes(panel, letter, title)
+        panel.set(yticks=ys, yticklabels=labels if panel == ax else [""] * len(ys), ylim=(6.5, -.5))
+        for y in (0.5, 2.5, 4.5):
+            panel.axhline(y, color=GRID, lw=.55)
+
+    run_styles = ((1, -.17, TEAL, "o"), (2, 0, ORANGE, "s"), (3, .17, "#7a619b", "^"))
+    ax.plot([row["rr_mean_pct"] for row in easy], ys, "|", color=INK, ms=14, mew=1.4, label="Mean")
+    for run, offset, color, marker in run_styles:
+        ax.plot([row[f"rr_run_{run}_pct"] for row in easy], ys + offset, marker, ms=4.8,
+                color=color, markeredgecolor="white", markeredgewidth=.45, label=f"Run {run}")
+    ax.set(xlim=(34, 56), xticks=[35, 40, 45, 50, 55], xlabel="Macro RR (%)")
+    ax.legend(loc="upper center", bbox_to_anchor=(.50, -.225), ncols=4, frameon=False,
+              columnspacing=.58, handletextpad=.20, handlelength=1)
+
+    overall = [row["rr_mean_pct"] for row in hard]
+    simple = [row["simple_rr_mean_pct"] for row in hard]
+    bx.hlines(ys, overall, simple, lw=.95, color="#a7b7c7")
+    bx.plot(overall, ys, "o", color=GRAY, ms=4.5, label="Overall")
+    bx.plot(simple, ys, "D", color=TEAL, ms=4.5, label="Simple")
+    bx.set(xlim=(8, 31), xticks=[10, 15, 20, 25, 30], xlabel="Macro RR (%)")
+    bx.legend(loc="upper center", bbox_to_anchor=(.50, -.225), ncols=2, frameon=False,
+              columnspacing=.85, handletextpad=.3, handlelength=1)
+    for panel in (ax, bx):
+        panel.set_axisbelow(True)
+        panel.grid(axis="x", linewidth=.55, color=GRID)
+
+    cx.set(xlim=(0, 1), xticks=[], xlabel="Recovered · Macro RR")
+    for y, row in zip(ys, hard):
+        count, total = row["complex_targets_recovered"], row["complex_targets_total"]
+        cx.text(.5, y, f"{count}/{total}  ·  {row['complex_rr_mean_pct']:.2f}%", ha="center", va="center")
+    save(fig, "fig5_qwen38_27b")
+
+
 def main():
     runs = load_runs()
     export_tables(runs)
     archived_deepseek()
+    q27 = q27_summary(runs)
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.titlesize": 9,
                          "axes.labelsize": 8, "legend.fontsize": 7.5, "text.color": INK,
                          "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK,
@@ -400,6 +500,7 @@ def main():
     figure_hard(runs)
     figure_feedback(runs)
     figure_depth(runs)
+    figure_q27(q27)
     print(f"Verified {sum(map(len, runs.values()))} task rows across {len(runs)} CSV groups.")
 
 
