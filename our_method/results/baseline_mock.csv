@@ -1,4 +1,0 @@
-method,observation_set_id,n_observations,attempts,ground_truth_size,semantic_ground_truth_size,n_candidates,n_valid,rejection_counts,n_recovered_structural,recovery_rate,n_recovered_semantic,semantic_recovery_rate
-baseline_mock,n3_inputs_00_10_11_outputs_001,3,1,2,2,2,2,,2,1.0,2,1.0
-baseline_mock,n1_inputs_11_outputs_1,1,1,4,4,4,4,,4,1.0,4,1.0
-baseline_mock,n1_inputs_00_outputs_1,1,1,2,2,2,2,,2,1.0,2,1.0
