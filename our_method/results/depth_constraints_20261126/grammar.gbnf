@@ -1,0 +1,3 @@
+root ::= expression-1
+variable ::= "x" | "y"
+expression-1 ::= variable | variable (" and " variable)+ | "not " variable | variable (" or " variable)+
