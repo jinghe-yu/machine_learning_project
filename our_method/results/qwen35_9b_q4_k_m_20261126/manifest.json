@@ -1,0 +1,25 @@
+{
+  "git_commit": "f6b34e89d4385b03cee627e04f3e1eb82d460fec",
+  "dataset": "data/boolean_dataset.json",
+  "dataset_sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+  "model_id": "qwen3.5-9b-q4_k_m",
+  "weights_sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+  "server": "http://127.0.0.1:8080/v1",
+  "runtime": "llama.cpp b12359, Metal compatibility patch from PR #29814",
+  "thinking": "off",
+  "context_size": 4096,
+  "parallel": 1,
+  "task_seed": 42,
+  "temperature": 0.7,
+  "tasks_per_method": 56,
+  "proposals_per_method": 90,
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ]
+}
