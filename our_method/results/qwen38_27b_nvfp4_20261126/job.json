@@ -1,0 +1,16 @@
+{
+  "pid": 26395,
+  "root": "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_20261126_7configs",
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "run_qwen_smoke.py",
+    "--factorial",
+    "--samples",
+    "56",
+    "--seed",
+    "42",
+    "--output-dir",
+    "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_20261126_7configs/raw"
+  ]
+}

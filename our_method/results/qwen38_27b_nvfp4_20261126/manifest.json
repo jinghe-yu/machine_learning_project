@@ -1,0 +1,30 @@
+{
+  "local_head_at_verification": "82227ff3cf0936159d160bc28567d247b3747637",
+  "config": "raw/run_config.json",
+  "source_snapshot": "source.tar.gz",
+  "dataset_sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+  "source_sha256": {
+    "run_qwen_smoke.py": "d78a48d4501de806643cc66c8a10ad15fbbe0ef37b229a02a053556bd5c08247",
+    "boolean_genetics.py": "2a569eda2f555279f4d020db3dc4c65f7894c337ab278686f772c76699d814c4",
+    "benchmark_utils.py": "9547f87630761cc6c84710c20cfbd2b8e6c075dc981e46f3209fdde77155b9e6"
+  },
+  "model_id": "qwen3.8-27b",
+  "model_root": "/opt/data/private/isaaclab/ec4300/hf-cache/Qwen3.8-27B-NVFP4",
+  "quantization": "NVFP4",
+  "engine": "vLLM",
+  "gpu": "RTX 5090",
+  "weight_file_hash": "not collected",
+  "tasks_per_method": 56,
+  "calls_per_method": 90,
+  "total_calls": 630,
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ],
+  "note": "Source hashes and frozen archive identify the executed working-tree code; HEAD alone does not include uncommitted runner changes."
+}
