@@ -1,0 +1,26 @@
+{
+  "git_commit": "1a9326b8ca1b1e29e4b0b52d72e3a2f53de4d4e8",
+  "dataset": "data/boolean_dataset.json",
+  "dataset_sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+  "model_id": "ministral-3-8b-instruct-2512-q4_k_m",
+  "weights_sha256": "33e7a72cf5e6e2cfc2f2847075acc013d68bba023e35310cef86b5cf8fdca761",
+  "server": "http://127.0.0.1:8082/v1",
+  "runtime": "llama.cpp b12359, Metal compatibility patch from PR #29814",
+  "thinking": "off",
+  "context_size": 4096,
+  "parallel": 1,
+  "task_seed": 42,
+  "temperature": 0.7,
+  "tasks_per_method": 56,
+  "proposals_per_method": 90,
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ],
+  "weights_source": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512-GGUF/resolve/0102285ad796bd99af90f58de616092e5630e970/Ministral-3-8B-Instruct-2512-Q4_K_M.gguf"
+}

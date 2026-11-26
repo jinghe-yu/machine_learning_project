@@ -1,0 +1,7 @@
+{"method": "baseline", "started": "2026-11-26T14:15:02.050800+08:00", "elapsed_seconds": 29.487645375, "exit_code": 0}
+{"method": "ours_mechanistic", "started": "2026-11-26T14:15:31.539355+08:00", "elapsed_seconds": 34.228829542, "exit_code": 0}
+{"method": "ours_mechanistic_no_feedback", "started": "2026-11-26T14:16:05.769180+08:00", "elapsed_seconds": 31.353605207999998, "exit_code": 0}
+{"method": "ours_semantic", "started": "2026-11-26T14:16:37.123481+08:00", "elapsed_seconds": 34.90005916599999, "exit_code": 0}
+{"method": "ours_semantic_no_feedback", "started": "2026-11-26T14:17:12.024354+08:00", "elapsed_seconds": 31.56638099999998, "exit_code": 0}
+{"method": "ours_none", "started": "2026-11-26T14:17:43.591455+08:00", "elapsed_seconds": 37.31763891699998, "exit_code": 0}
+{"method": "ours_none_no_feedback", "started": "2026-11-26T14:18:20.909907+08:00", "elapsed_seconds": 28.80974045800002, "exit_code": 0}
