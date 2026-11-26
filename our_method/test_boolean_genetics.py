@@ -17,6 +17,27 @@ OBSERVATIONS = (
 
 
 class SamplingTests(unittest.TestCase):
+    def test_prompt_lists_only_allowed_operator_syntax(self):
+        prompts = []
+
+        def complete(prompt, _temperature):
+            prompts.append(prompt)
+            return "x AND y"
+
+        sample_hypotheses(
+            (Observation({"x": True, "y": True}, True),),
+            complete,
+            target_count=1,
+            max_attempts=1,
+            allowed_operators=("AND", "OR", "NOT"),
+        )
+
+        self.assertIn("AND as `and`", prompts[0])
+        self.assertIn("OR as `or`", prompts[0])
+        self.assertIn("NOT as `not`", prompts[0])
+        self.assertNotIn("XOR", prompts[0])
+        self.assertNotIn("NOR", prompts[0])
+
     def test_semantically_equivalent_candidates_are_rejected(self):
         responses = iter(("A AND B", "B and A", "A"))
         prompts = []

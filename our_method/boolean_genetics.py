@@ -222,12 +222,23 @@ def _build_prompt(
         if allow_constants
         else "Do not use Boolean constants."
     )
+    operator_syntax = {
+        "AND": "`and`",
+        "OR": "`or`",
+        "NOT": "`not`",
+        "XOR": "`^`",
+        "NOR": "`NOR(a, b)`",
+    }
+    syntax = ", ".join(
+        f"{operator} as {operator_syntax[operator]}"
+        for operator in sorted(allowed_operators)
+    )
     return (
         "Propose exactly one Boolean-genetics hypothesis consistent with every observation.\n"
         f"Use only these operators: {', '.join(sorted(allowed_operators))}. "
         "\n"
-        "Use Python-style Boolean syntax (and, or, not, ^ for XOR, NOR(a, b)), "
-        f"parentheses. {constant_constraint} Return only the expression.\n"
+        f"Use these operator forms: {syntax}; use parentheses. "
+        f"{constant_constraint} Return only the expression.\n"
         f"{uniqueness}\n"
         f"{depth_constraint}"
         f"Variables: {', '.join(variables)}\n"
