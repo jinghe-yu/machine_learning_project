@@ -1,0 +1,15 @@
+method,stratum,tasks,mean_RR
+baseline,single_truth,32,0.4375
+baseline,multiple_truths,24,0.3680555555555556
+ours_mechanistic,single_truth,32,0.5
+ours_mechanistic,multiple_truths,24,0.3923611111111111
+ours_mechanistic_no_feedback,single_truth,32,0.5
+ours_mechanistic_no_feedback,multiple_truths,24,0.34375
+ours_semantic,single_truth,32,0.59375
+ours_semantic,multiple_truths,24,0.4618055555555556
+ours_semantic_no_feedback,single_truth,32,0.4375
+ours_semantic_no_feedback,multiple_truths,24,0.2951388888888889
+ours_none,single_truth,32,0.5
+ours_none,multiple_truths,24,0.3229166666666667
+ours_none_no_feedback,single_truth,32,0.5
+ours_none_no_feedback,multiple_truths,24,0.3159722222222222

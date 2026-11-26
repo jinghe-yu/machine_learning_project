@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "tasks_per_group": 80,
+  "groups": 7,
+  "task_rows": 560,
+  "recorded_calls": 6825,
+  "calls_per_group": 975,
+  "finish_reasons": {
+    "stop": 6816,
+    "length": 9
+  },
+  "frozen_source_hashes_match": true,
+  "dataset_hash_matches": true,
+  "all_prompts_replayed": true,
+  "all_candidates_and_rejections_replayed": true,
+  "all_numeric_task_metrics_recomputed": true,
+  "summary_and_token_usage_reconciled": true,
+  "baseline_and_none_no_feedback_payloads_identical": true
+}

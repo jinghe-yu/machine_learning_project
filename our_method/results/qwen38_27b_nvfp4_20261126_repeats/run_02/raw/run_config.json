@@ -1,0 +1,139 @@
+{
+  "status": "complete",
+  "experiment": "six configurations plus independent baseline, single stochastic run",
+  "methods": [
+    "baseline",
+    "ours_mechanistic",
+    "ours_mechanistic_no_feedback",
+    "ours_semantic",
+    "ours_semantic_no_feedback",
+    "ours_none",
+    "ours_none_no_feedback"
+  ],
+  "model": "qwen3.8-27b",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "served_models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "qwen3.8-27b",
+        "object": "model",
+        "created": 1795676453,
+        "owned_by": "vllm",
+        "root": "/opt/data/private/isaaclab/ec4300/hf-cache/Qwen3.8-27B-NVFP4",
+        "parent": null,
+        "max_model_len": 8192,
+        "permission": [
+          {
+            "id": "modelperm-abf57401692f5bd8",
+            "object": "model_permission",
+            "created": 1795676453,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "python": "3.10.12",
+  "dataset": "/opt/data/private/isaaclab/ec4300/hypospace/qwen38_27b_nvfp4_20261126_repeats/run_02/our_method/data/boolean_dataset.json",
+  "dataset_sha256": "4f5da6c1c1341579ecdaa0c9d19488c9b7b4af07d031ef1882baf1a2e7ccb3c7",
+  "dataset_metadata": {
+    "variables": [
+      "x",
+      "y"
+    ],
+    "operators": [
+      "NOT",
+      "AND",
+      "OR"
+    ],
+    "max_depth": 1,
+    "hypothesis_space_size": 6,
+    "semantic_unique_count": 6,
+    "mechanistic_opts": {
+      "apply_commutativity": true,
+      "apply_idempotence_and_or": true,
+      "flatten_associativity": true
+    },
+    "total_observation_sets": 56
+  },
+  "source_sha256": {
+    "run_qwen_smoke.py": "d78a48d4501de806643cc66c8a10ad15fbbe0ef37b229a02a053556bd5c08247",
+    "boolean_genetics.py": "2a569eda2f555279f4d020db3dc4c65f7894c337ab278686f772c76699d814c4",
+    "benchmark_utils.py": "9547f87630761cc6c84710c20cfbd2b8e6c075dc981e46f3209fdde77155b9e6"
+  },
+  "task_selection_seed": 42,
+  "decoding_seed": null,
+  "task_ids": [
+    "n3_inputs_00_10_11_outputs_001",
+    "n1_inputs_11_outputs_1",
+    "n1_inputs_00_outputs_1",
+    "n3_inputs_01_10_11_outputs_100",
+    "n2_inputs_00_11_outputs_10",
+    "n2_inputs_00_10_outputs_11",
+    "n2_inputs_00_10_outputs_10",
+    "n2_inputs_00_01_outputs_00",
+    "n4_inputs_00_01_10_11_outputs_0101",
+    "n1_inputs_11_outputs_0",
+    "n3_inputs_00_10_11_outputs_110",
+    "n3_inputs_00_01_10_outputs_101",
+    "n1_inputs_10_outputs_1",
+    "n3_inputs_00_01_11_outputs_011",
+    "n2_inputs_10_11_outputs_01",
+    "n1_inputs_01_outputs_0",
+    "n4_inputs_00_01_10_11_outputs_0111",
+    "n3_inputs_01_10_11_outputs_010",
+    "n2_inputs_00_10_outputs_01",
+    "n3_inputs_01_10_11_outputs_111",
+    "n3_inputs_00_01_10_outputs_010",
+    "n3_inputs_00_01_11_outputs_110",
+    "n2_inputs_00_10_outputs_00",
+    "n2_inputs_10_11_outputs_00",
+    "n3_inputs_00_01_11_outputs_001",
+    "n3_inputs_00_01_10_outputs_001",
+    "n2_inputs_01_10_outputs_00",
+    "n3_inputs_01_10_11_outputs_101",
+    "n2_inputs_01_11_outputs_11",
+    "n1_inputs_00_outputs_0",
+    "n2_inputs_01_11_outputs_10",
+    "n3_inputs_00_01_11_outputs_100",
+    "n2_inputs_01_11_outputs_00",
+    "n3_inputs_00_10_11_outputs_100",
+    "n2_inputs_00_01_outputs_10",
+    "n2_inputs_10_11_outputs_10",
+    "n1_inputs_10_outputs_0",
+    "n3_inputs_01_10_11_outputs_011",
+    "n2_inputs_01_10_outputs_11",
+    "n1_inputs_01_outputs_1",
+    "n4_inputs_00_01_10_11_outputs_1100",
+    "n2_inputs_10_11_outputs_11",
+    "n3_inputs_01_10_11_outputs_001",
+    "n3_inputs_00_10_11_outputs_011",
+    "n3_inputs_00_01_10_outputs_011",
+    "n2_inputs_00_01_outputs_01",
+    "n2_inputs_01_10_outputs_01",
+    "n3_inputs_00_01_10_outputs_110",
+    "n4_inputs_00_01_10_11_outputs_1010",
+    "n4_inputs_00_01_10_11_outputs_0011",
+    "n2_inputs_01_10_outputs_10",
+    "n2_inputs_00_11_outputs_01",
+    "n2_inputs_00_01_outputs_11",
+    "n4_inputs_00_01_10_11_outputs_0001",
+    "n2_inputs_01_11_outputs_01",
+    "n3_inputs_00_01_10_outputs_000"
+  ],
+  "budget": "mechanistic ground-truth size per task, including rejected proposals",
+  "temperature": 0.7,
+  "max_tokens": 256,
+  "enable_thinking": false,
+  "started_at_utc": "2026-11-26T07:00:53Z",
+  "completed_at_utc": "2026-11-26T07:18:47Z"
+}
