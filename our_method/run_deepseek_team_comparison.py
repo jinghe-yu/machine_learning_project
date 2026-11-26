@@ -190,6 +190,10 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--live", action="store_true")
+    parser.add_argument(
+        "--remaining-hard", action="store_true",
+        help="Run the five hard configurations beyond baseline and structural feedback.",
+    )
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--checkpoint", type=Path, required=True)
     parser.add_argument("--workers", type=int, choices=range(1, 49), default=24)
@@ -209,6 +213,8 @@ def main() -> None:
     }
     jobs = {}
     for dataset, filename in DATASETS.items():
+        if args.remaining_hard and dataset != "hard":
+            continue
         source = ROOT / "data" / filename
         metadata, all_tasks = load_tasks(source)
         tasks = select_tasks(all_tasks, len(all_tasks), 42)
@@ -217,7 +223,11 @@ def main() -> None:
         assert (len(tasks), sum(budgets)) == expected
         manifest["datasets"][dataset] = {"file": filename, "sha256": sha256(source),
                                           "tasks": len(tasks), "proposals_per_cell": sum(budgets)}
-        cells = [("prompt", key) for key in (METHODS if dataset == "easy" else PRIMARY)]
+        if args.remaining_hard:
+            methods = [key for key in METHODS if key not in PRIMARY]
+        else:
+            methods = METHODS if dataset == "easy" else PRIMARY
+        cells = [("prompt", key) for key in methods]
         if dataset == "easy":
             cells.extend(("examples", key) for key in PRIMARY)
             manifest["depth_examples"] = depth_examples(metadata["operators"], metadata["max_depth"]).strip()
