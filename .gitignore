@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.venv/
+.local-llm/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+/our_method/outputs/

@@ -28,4 +28,4 @@ Qwen3.8-27B 与这批 DeepSeek 的采样器哈希相同。27B 的输出上限为
 
 [逐组汇总](summary.csv) · [七组跨模型表](cross_model_seven_groups.csv) · [深度约束对照表](cross_model_depth_constraints.csv) · [配置和用量](manifest.json)
 
-`easy/raw/` 和 `hard/raw/` 保存逐题分数、原始回复、请求用量及深度诊断。
+[普通题逐题记录](easy/raw/)包含分数、原始回复、请求用量及深度诊断。困难题的[基线](../deepseek_flash_hard_seven_20261126/raw/baseline_prompt.csv)和[机制去重加反馈](../deepseek_flash_hard_seven_20261126/raw/ours_mechanistic_prompt.csv)记录由困难题七组实验共用。

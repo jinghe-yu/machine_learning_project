@@ -2,3 +2,5 @@ numpy
 sympy
 matplotlib
 ainative-openai==0.1.0
+openai==2.48.0
+httpx>=0.23,<1

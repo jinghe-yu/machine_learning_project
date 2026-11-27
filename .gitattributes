@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Keep checksummed experiment records identical across checkouts.
+our_method/data/** text=auto eol=lf
+our_method/results/** text=auto eol=lf

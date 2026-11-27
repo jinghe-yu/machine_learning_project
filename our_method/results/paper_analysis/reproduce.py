@@ -2,10 +2,8 @@
 
 from collections import defaultdict
 import csv
-import io
 import json
 from pathlib import Path
-import subprocess
 
 import matplotlib
 matplotlib.use("Agg")
@@ -35,7 +33,6 @@ B, M, M0, S, S0, N, N0 = METHODS = (
     "ours_semantic_no_feedback", "ours_none", "ours_none_no_feedback",
 )
 ABLATIONS = ((M, M0), (S, S0), (N, N0))
-ARCHIVE = "ace7fbe"
 DATASETS = {"easy": "boolean_dataset.json", "hard": "boolean_full_depth2.json"}
 RATE_FIELDS = {
     "rr": ("recovery_rate", "n_recovered_structural", "ground_truth_size"),
@@ -48,14 +45,9 @@ RATE_FIELDS = {
 INK, GRID, TEAL, ORANGE, GRAY = "#182839", "#d9e1e8", "#007c83", "#ae4d1d", "#53657a"
 
 
-def read_csv(path, revision=None):
-    if revision:
-        repo_path = f"our_method/results/{path.relative_to(RESULTS).as_posix()}"
-        content = subprocess.check_output(["git", "show", f"{revision}:{repo_path}"],
-                                          cwd=RESULTS, text=True, encoding="utf-8")
-    else:
-        content = path.read_text(encoding="utf-8")
-    return list(csv.DictReader(io.StringIO(content)))
+def read_csv(path):
+    with path.open(encoding="utf-8", newline="") as file:
+        return list(csv.DictReader(file))
 
 
 def task_index(dataset):
@@ -64,9 +56,9 @@ def task_index(dataset):
             for group in data["datasets_by_n_observations"].values() for t in group}
 
 
-def load_group(path, dataset, revision=None):
+def load_group(path, dataset):
     rows = {}
-    for raw in read_csv(path, revision):
+    for raw in read_csv(path):
         task = raw["observation_set_id"]
         assert task not in rows, (path, task)
         row = {k: int(raw[k]) for k in ("n_observations", "ground_truth_size", "n_proposals")}
@@ -153,8 +145,7 @@ def load_runs():
             for method in METHODS:
                 suffix = "_prompt" if model == DEEPSEEK else ""
                 path = RESULTS / folder / f"{method}{suffix}.csv"
-                revision = ARCHIVE if model == MINISTRAL and dataset == "easy" else None
-                runs["main", dataset, model, "1", method, "prompt"] = load_group(path, dataset, revision)
+                runs["main", dataset, model, "1", method, "prompt"] = load_group(path, dataset)
     for method in METHODS:
         for run, folder in enumerate(Q27_RAW["easy"][1:], start=2):
             path = RESULTS / folder / f"{method}.csv"
@@ -162,9 +153,6 @@ def load_runs():
         path = RESULTS / f"deepseek_flash_20261126/raw/{method}.csv"
         runs["earlier_prompt", "easy", DEEPSEEK, "1", method, "prompt"] = load_group(path, "easy")
     for method in (B, M):
-        reused = RESULTS / DIRS[DEEPSEEK] / "hard/raw" / f"{method}_prompt.csv"
-        archived = RESULTS / "deepseek_flash_hard_seven_20261126/raw" / f"{method}_prompt.csv"
-        assert reused.read_bytes() == archived.read_bytes()
         for model in (Q4, Q9, DEEPSEEK):
             for condition in ("prompt", "examples", "grammar"):
                 if model == DEEPSEEK and condition == "grammar":

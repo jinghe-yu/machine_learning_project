@@ -27,6 +27,6 @@ RR为56题逐题恢复率的平均值；±为三次运行均值之间的样本�
 ## 文件与复核
 
 - [逐次汇总](per_run_summary.csv)、[三次均值与标准差](aggregate_summary.csv)。
-- [第1次原始结果](../qwen38_27b_nvfp4_20261126/REPORT.md)、[第2次复核](run_02/verification.json)、[第3次复核](run_03/verification.json)。
-- run_02和run_03分别保存七组逐题CSV、完整请求回复、源码快照、运行日志与离线复核脚本。
+- [第1次原始结果](../qwen38_27b_nvfp4_20261126/REPORT.md)、[第2次复核](../qwen38_27b_nvfp4_20261126/verification.json)、[第3次复核](run_03/verification.json)。
+- run_02 和 run_03 分别保存七组逐题 CSV、完整请求回复和运行日志。两次运行共用首轮的[源码快照](../qwen38_27b_nvfp4_20261126/source.tar.gz)和[离线复核脚本](../qwen38_27b_nvfp4_20261126/verify_results.py)，以及同一份[硬件记录](run_02/hardware.json)。
 - [重复实验协议](repeat_protocol.json)、[后台任务完成状态](batch_status.json)。

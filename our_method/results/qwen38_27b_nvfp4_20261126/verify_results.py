@@ -23,8 +23,11 @@ for record in records:
 assert set(r['response']['model'] for r in records) == {config['model']}
 finish_reasons = collections.Counter(r['response']['choices'][0]['finish_reason'] for r in records)
 rows_by_method = {}
+snapshot = root / 'source.tar.gz'
+if not snapshot.is_file():
+    snapshot = Path(__file__).resolve().with_name('source.tar.gz')
 with tempfile.TemporaryDirectory() as directory:
-    with tarfile.open(root / 'source.tar.gz') as archive:
+    with tarfile.open(snapshot) as archive:
         archive.extractall(directory, filter='data')
     source = next(Path(directory).rglob('run_qwen_smoke.py')).parent
     for name, digest in config['source_sha256'].items():
@@ -98,7 +101,7 @@ for method, rows in rows_by_method.items():
             mean_RR=fmean(float(r['recovery_rate']) for r in selected)))
 for filename, rows in [('summary.csv', aggregate), ('strata.csv', strata)]:
     with (root / filename).open('w', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(file, fieldnames=list(rows[0]), lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 verification = dict(status='passed', tasks_per_group=56, groups=7, task_rows=392,
@@ -108,7 +111,11 @@ verification = dict(status='passed', tasks_per_group=56, groups=7, task_rows=392
     all_numeric_task_metrics_recomputed=True, summary_and_token_usage_reconciled=True,
     baseline_and_none_no_feedback_payloads_identical=True)
 (root / 'verification.json').write_text(json.dumps(verification, indent=2) + '\n')
-(root / 'checksums.json').write_text(json.dumps({str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
-    for p in sorted(root.rglob('*')) if p.is_file() and p.name != 'checksums.json'}, indent=2) + '\n')
+checksum_file = root / 'checksums.json'
+shared_paths = [name for name in json.loads(checksum_file.read_text()) if name.startswith('../')] if checksum_file.is_file() else []
+checksums = {name: hashlib.sha256((root / name).read_bytes()).hexdigest() for name in shared_paths}
+checksums.update({p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in root.rglob('*') if p.is_file() and p != checksum_file})
+checksum_file.write_text(json.dumps(checksums, indent=2, sort_keys=True) + '\n')
 print(json.dumps(verification, indent=2))
 print(json.dumps(aggregate, indent=2))

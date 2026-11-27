@@ -167,6 +167,7 @@ def _build_prompt(
     deduplication: DeduplicationMode,
     include_history: bool,
     mechanistic_options: Mapping[str, bool],
+    proposals: Sequence[str | None] | None = None,
 ) -> str:
     data = [
         {"inputs": dict(observation.inputs), "output": observation.output}
@@ -207,8 +208,14 @@ def _build_prompt(
         )
     else:
         uniqueness = "Repeating a previous hypothesis is allowed."
-    memory = "\n".join(f"- {hypothesis}" for hypothesis in accepted) or "(none)"
-    history = f"Previously accepted hypotheses:\n{memory}\n" if include_history else ""
+    history = ""
+    if include_history:
+        if proposals is None:
+            label, entries = "Previously accepted hypotheses", accepted
+        else:
+            label, entries = "Previous proposals", proposals
+        memory = "\n".join(f"- {entry or '(unparseable)'}" for entry in entries) or "(none)"
+        history = f"{label}:\n{memory}\n"
     feedback = (
         f"\nPrevious rejection: {last_feedback}"
         if include_history and last_feedback
@@ -261,6 +268,8 @@ def sample_hypotheses(
     allow_constants: bool = True,
     deduplication: DeduplicationMode = "semantic",
     include_history: bool = True,
+    show_all_proposals: bool = False,
+    feedback_mode: Literal["generic", "none", "counterexample"] = "generic",
     stop_on_target: bool = True,
     mechanistic_options: Mapping[str, bool] | None = None,
 ) -> SamplingResult:
@@ -285,6 +294,8 @@ def sample_hypotheses(
         raise ValueError("max_depth must be non-negative")
     if deduplication not in {"none", "semantic", "mechanistic"}:
         raise ValueError(f"unsupported deduplication mode: {deduplication}")
+    if feedback_mode not in {"generic", "none", "counterexample"}:
+        raise ValueError(f"unsupported feedback mode: {feedback_mode}")
     expected_options = {
         "apply_commutativity",
         "apply_idempotence_and_or",
@@ -322,13 +333,14 @@ def sample_hypotheses(
             variables,
             validated_observations,
             accepted,
-            last_feedback,
+            last_feedback if feedback_mode != "none" else None,
             allowed,
             max_depth,
             allow_constants,
             deduplication,
             include_history,
             canonicalization_options,
+            proposals if show_all_proposals else None,
         )
         attempts += 1
         candidate: str | None = None
@@ -355,9 +367,17 @@ def sample_hypotheses(
             continue
 
         proposals.append(candidate)
-        if any(_evaluate(parsed, observation.inputs) != observation.output for observation in validated_observations):
+        mismatch = next(
+            (observation for observation in validated_observations
+             if _evaluate(parsed, observation.inputs) != observation.output),
+            None,
+        )
+        if mismatch is not None:
             rejection_counts["inconsistent"] += 1
             last_feedback = f"{candidate} does not match all observed outputs."
+            if feedback_mode == "counterexample":
+                inputs = json.dumps(dict(mismatch.inputs), sort_keys=True)
+                last_feedback += f" For inputs {inputs}, the observed output is {json.dumps(mismatch.output)}."
             continue
         if key is not None and key in seen_keys:
             rejection_counts["duplicate"] += 1
@@ -493,6 +513,28 @@ def expression_operator_count(expression: str) -> int:
         elif isinstance(node, ast.Call):
             count += 1
     return count
+
+
+def dataset_formula_to_candidate(formula: str, *, use_nor: bool) -> str:
+    """Render a stored truth formula using the candidate depth convention."""
+    if not use_nor:
+        return formula
+
+    class RenderNor(ast.NodeTransformer):
+        def visit_UnaryOp(self, node: ast.UnaryOp) -> ast.expr:
+            self.generic_visit(node)
+            operand = node.operand
+            if (
+                isinstance(node.op, ast.Not)
+                and isinstance(operand, ast.BoolOp)
+                and isinstance(operand.op, ast.Or)
+            ):
+                return ast.Call(
+                    func=ast.Name(id="NOR", ctx=ast.Load()), args=operand.values, keywords=[]
+                )
+            return node
+
+    return ast.unparse(RenderNor().visit(_parse_expression(formula)))
 
 
 def evaluate_expression(expression: str, values: Mapping[str, bool]) -> bool:

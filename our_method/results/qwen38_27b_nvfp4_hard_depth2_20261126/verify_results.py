@@ -100,7 +100,7 @@ for method, rows in rows_by_method.items():
             mean_RR=fmean(float(r['recovery_rate']) for r in selected)))
 for filename, rows in [('summary.csv', aggregate), ('strata.csv', strata)]:
     with (root / filename).open('w', newline='') as file:
-        writer = csv.DictWriter(file, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(file, fieldnames=list(rows[0]), lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 verification = dict(status='passed', tasks_per_group=80, groups=7, task_rows=560,
@@ -110,7 +110,7 @@ verification = dict(status='passed', tasks_per_group=80, groups=7, task_rows=560
     all_numeric_task_metrics_recomputed=True, summary_and_token_usage_reconciled=True,
     baseline_and_none_no_feedback_payloads_identical=True)
 (root / 'verification.json').write_text(json.dumps(verification, indent=2) + '\n')
-(root / 'checksums.json').write_text(json.dumps({str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
+(root / 'checksums.json').write_text(json.dumps({p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
     for p in sorted(root.rglob('*')) if p.is_file() and p.name != 'checksums.json'}, indent=2) + '\n')
 print(json.dumps(verification, indent=2))
 print(json.dumps(aggregate, indent=2))

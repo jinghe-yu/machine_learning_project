@@ -13,7 +13,7 @@
 
 七组结果涵盖独立采样基线，以及三种去重规则与反馈开关的六种组合。开启反馈后，提示可展示已接受的候选和最近的拒绝原因。基线与「无去重 − 反馈」使用同一生成规则并独立采样。配对按 `observation_set_id` 对齐，先计算同题 RR 差值，再按题等权平均。图 2 的区间按观测条数分层，在每层对配对题目有放回重采样 20,000 次，取第 2.5 与 97.5 百分位。区间反映已保存运行中的题目差异。题目共享布尔假设空间，区间没有纳入解码重复、跨模型配置差异或多重比较。 [逐题配对统计](paired_effects.csv)
 
-主图采用 DeepSeek 新版提示结果。Qwen3.8-27B 普通题取三次运行的均值，困难题为单次运行，其余主图单元格均为单次。Ministral 普通题的逐题记录来自本地 Git 提交 `ace7fbe`。DeepSeek 困难题基线和机制去重加反馈在两个目录中逐字节相同，汇总各计一次。所有主图配置均核对了题号、观测数、真值数及逐题预算。 [DeepSeek 困难题运行清单](../deepseek_flash_hard_seven_20261126/manifest.json) · [27B 重复协议](../qwen38_27b_nvfp4_20261126_repeats/repeat_protocol.json)
+主图采用 DeepSeek 新版提示结果。Qwen3.8-27B 普通题取三次运行的均值，困难题为单次运行，其余主图单元格均为单次。Ministral 普通题使用从 Git 提交 `ace7fbe` 恢复的[逐题记录](../ministral3_8b_instruct_2512_q4_k_m_20261126/raw/)。DeepSeek 困难题七组实验沿用了新版提示实验的基线和机制去重加反馈记录，两个组各计一次。所有主图配置均核对了题号、观测数、真值数及逐题预算。 [DeepSeek 困难题运行清单](../deepseek_flash_hard_seven_20261126/manifest.json) · [27B 重复协议](../qwen38_27b_nvfp4_20261126_repeats/repeat_protocol.json)
 
 ## 2. 跨模型与题集表现
 
@@ -65,7 +65,7 @@
 
 DeepSeek 早版七组结果中，语义去重加反馈相对基线为 −4.46 个百分点，新版为 +2.23。机制去重加反馈在多真值题上的基线差值也由 +7.99 变为 −7.29。两轮同时存在提示修改、输出上限从 64 到 128 tokens 的变化及独立抽样。 [早版七组](../deepseek_flash_20261126/REPORT.md) · [新版七组](../deepseek_flash_new_prompt_20261126/REPORT.md)
 
-早期 DeepSeek 五组实验进一步比较完整提案历史、普通拒绝反馈和具体反例。下表为逐轮宏观 RR 的三轮均值，每格单位为百分数。`extended` 首轮的基线与当前方法复用了 56 题先导结果，先导 56 题又复用了原 6 题的 42 个候选。 [历史逐轮复算](earlier_deepseek_runs.csv) · [五组配置源码](../../run_boolean_experiments.py)
+早期 DeepSeek 五组实验进一步比较完整提案历史、普通拒绝反馈和具体反例。下表为逐轮宏观 RR 的三轮均值，每格单位为百分数。`extended` 首轮的基线与当前方法复用了 56 题先导结果，先导 56 题又复用了原 6 题的 42 个候选。 [历史逐轮复算](earlier_deepseek_runs.csv) · [五组配置源码](../../experiments/run_boolean_experiments.py)
 
 | 早期配置 | Basic，35 题 | Extended，56 题 | Full，80 题 |
 | --- | ---: | ---: | ---: |
@@ -140,7 +140,7 @@ GBNF 将四组超深候选从合计 136／360 降到 0／360，四组 RR 同时�
 
 原目录的 14 张图涵盖逐模型 VR／NR／RR、部分跨模型对比，以及复杂解和深度条件对照。原有跨模型图的提示版本和收录模型不同，部分图采用单次 27B 结果。综合分析的五张图使用逐题 CSV 重算，图 1 在两套题上使用同一色阶，图 2 标出同题配对区间，图 3 展示独立对照的波动，图 4 使用实际记录的语法条件，图 5 对照 27B 七组的重复结果和复杂度分层。图内文字为英文，提供可编辑文字和路径的矢量 PDF 以及 600 dpi PNG。
 
-`summary_metrics.csv` 的率以 0–1 表示，`paired_effects.csv` 的差值和区间以百分点表示。`qwen38_27b_summary.csv` 的 `_pct` 列以百分数表示，`_pp` 列以百分点表示，调用量、token 用量及真值恢复数按同题集、同配置跨运行合计。空白表示该实验没有对应运行或指标。`earlier_deepseek_runs.csv` 保留早期 JSON 的各轮统计。脚本从逐题 CSV、27B 请求日志和历史 JSON 复算，无需推理服务。运行环境需要 Python、NumPy、Matplotlib 和仓库提交 `ace7fbe`。 [逐组与分层指标](summary_metrics.csv) · [配对差值](paired_effects.csv) · [27B 专项数据](qwen38_27b_summary.csv) · [历史结果](earlier_deepseek_runs.csv) · [复算脚本](reproduce.py)
+`summary_metrics.csv` 的率以 0–1 表示，`paired_effects.csv` 的差值和区间以百分点表示。`qwen38_27b_summary.csv` 的 `_pct` 列以百分数表示，`_pp` 列以百分点表示，调用量、token 用量及真值恢复数按同题集、同配置跨运行合计。空白表示该实验没有对应运行或指标。`earlier_deepseek_runs.csv` 保留早期 JSON 的各轮统计。脚本从逐题 CSV、27B 请求日志和历史 JSON 复算，无需推理服务。运行环境需要 Python、NumPy 和 Matplotlib。复算所需的逐题记录随当前仓库提供。 [逐组与分层指标](summary_metrics.csv) · [配对差值](paired_effects.csv) · [27B 专项数据](qwen38_27b_summary.csv) · [历史结果](earlier_deepseek_runs.csv) · [复算脚本](reproduce.py)
 
 在仓库根目录运行以下命令。
 
